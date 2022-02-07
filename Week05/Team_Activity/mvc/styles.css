@@ -25,6 +25,7 @@ body {
   }
   .styles li > h2 {
     text-align: center;
+    color:rgb(95, 61, 30);
     background-color: rgb(180, 177, 91);
     margin-bottom: 0.9em;
     padding: .4em;
@@ -48,4 +49,5 @@ body {
   }
   .light h3 {
     margin-bottom: -0.5em;
+    color:rgb(95, 61, 30);
   }
