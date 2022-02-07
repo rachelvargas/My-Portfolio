@@ -4,10 +4,10 @@ body {
     font-family: Roboto, 'Helvetica Neue', sans-serif;
   }
   main > h1 {
-    size:30px;
+    size:50px;
     text-align: center;
-    background-color: rgba(61, 235, 61, 0.753);
-    padding: 1em;
+    background-color: rgba(32, 179, 32, 0.986);
+    padding: 1.5em;
     margin-top: 0;
     margin-bottom: -0.5em;
   }
@@ -21,12 +21,14 @@ body {
     list-style-type: none;
   }
   .styles div {
-    padding: 0 0.5em;
+    padding: 0 0.7em;
   }
   .styles li > h2 {
     text-align: center;
-    background-color: rgb(124, 245, 154);
-    margin-bottom: 0.5em;
+    background-color: rgb(180, 177, 91);
+    margin-bottom: 0.9em;
+    padding: .4em;
+      
   }
 
   .light {
