@@ -1,9 +1,12 @@
 body {
   font-size: 25px;
   font-family: Verdana, Arial, sans-serif;
+  background-color:light-gray;
 }
 
 h1 {
   background-color: blue;
   padding: 1.1em;
+  color: white;
+  text-aling:center;
 }
