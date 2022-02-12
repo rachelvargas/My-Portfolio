@@ -54,7 +54,7 @@ const list = [
             return list;
         }
         getHikeByName(name){
-            return list.find(hike => hike.name === name);
+           return list.find(hike => hike.name === name);
         }
     }
     export default HikeModel;
