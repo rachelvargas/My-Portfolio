@@ -22,9 +22,9 @@ export default class HikesController {
     showOneHike(hikeName){
         // use this when you need to show just one hike...with details
         //in order to show the details of a hike ontouchend we will need to attach a listener AFTER the list of hikes has been built. The function below does that.
-        const hike = this.hikeModel.getHikeByName(hikeName);
+        const hiker = this.hikeModel.getHikeByName(hikeName);
         this.hikesView.renderOneHikeFull(
-            this.parentElement, hike).ontouchend = () => {
+            this.parentElement, hiker).ontouchend = () => {
                 this.showHikeList();
             };
         
@@ -35,7 +35,7 @@ export default class HikesController {
         //We need to loop through the children of our list and attach a listener to each, remember though that children is a nodeList...not an array. So in order to use something like a forEach we need to convert it to an array.
         const childrenArray = Array.from(this.parentElement.children);
         childrenArray.forEach(child => {
-            child.addEventListener('touched', e => {
+            child.addEventListener('touchend', e => {
                 this.showOneHike(e.currentTarget.dataset.name);
             });
         });
