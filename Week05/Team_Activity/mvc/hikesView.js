@@ -1,4 +1,4 @@
-  /*// Hike View handler
+ /*// Hike View handler
 export default class HikesView {
     constructor(listElementId) {
         //willd need this
@@ -26,6 +26,8 @@ const imgBasePath = '//byui-cit.github.io/cit261/examples/';
 
 class HikesView {
     renderHikeList(hikeListElement, list){
+        //in this case the controleer handle where the list gets placed.
+        
         hikeListElement.innerHTML = '';
         list.forEach(hike => {
             hikeListElement.appendChild(this.renderOneHikeLight(hike));
@@ -33,7 +35,8 @@ class HikesView {
 }
 renderOneHikeLight(hike){
     const hikers = document.createElement('li');
-    hikers.classList.add('light');
+    hikers.classList.add('output');
+    hikers.setAttribute('data', hike.name);
     hikers.innerHTML = ` <h2>${hike.name}</h2>
     <div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${
       hike.imgAlt
