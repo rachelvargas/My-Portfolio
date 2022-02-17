@@ -1,4 +1,4 @@
-const toDoList = ToDo;
+const toDoList = "ToDo";
 //using JSON to save the ToDo list in local storage
 export function storageList(todo){
   console.log('Local Storage: ');
