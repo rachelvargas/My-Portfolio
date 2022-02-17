@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8"/>    
+    <meta charset="UTF-8" />
     <meta name="description" content='A JaaScript To Do List'>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>To Do App</title>
     <link rel='stylesheet' href='styles.css'>
-</head>    
+</head>
 
 <body>
-  <h1 class="title">Todos</h1>
-  
+    <h1 class="title">Todos</h1>
+
     <ul id="toDoList"></ul>
     <div id="container">
-      <span class="actions">
+        <span id="actions">
         <span id="taskLeft">Task Left</span>
         <button id="all" class="filter">All</button>
         <button id="active" class="filter">Active</button>
         <button id="completed" class="filter">Completed</button>
-      </span>
+        </span>
     </div>
     <div class="form">
-      
-        <!--<input name='searchInput'>-->
         What To Do:<input id="addTodo" type='text' name='add-box' placeholder='Title'>
-        <button id="adding" type='button'>+</button>        
+        <button id="adding" type='button'>+</button>
 
-    </div>      
-         
+    </div>
+
     <script src="main.js" type="module"></script>
 </body>
+
 </html>
-	
