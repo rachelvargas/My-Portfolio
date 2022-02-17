@@ -33,7 +33,7 @@ export function retrievingList(filter) {
 }
 //in local storage, updating the todos list that have been checked as complete
 export function checkedListItem(id) {
-    let list = JSON.parse(localStorage.setItem(toDoList));
+    let list = JSON.parse(localStorage.getItem(toDoList));
     for (let i = 0; i < list.length; i++) {
         if (parseInt(list[i].id, 15) === parseInt(id, 15)) {
             if (list[i].completed === false) {
