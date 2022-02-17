@@ -1,4 +1,4 @@
-import {getContent, resetContent, notCompleted, renderList, notCompleted} from './utilities.js'
+import {getContent, resetContent, renderList, notCompleted} from './utilities.js'
 
 import {storageList, retrievingList, checkedListItem, removedFromList} from './ls.js'
 export default class ToDo {
