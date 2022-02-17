@@ -17,7 +17,7 @@ html {
     position: absolute;
     width: 100%;
     bottom: 15px;
-    padding: 15px;
+    padding: 35px;
     text-align: center;
 }
 
@@ -70,6 +70,7 @@ li {
 #container {
     text-align: center;
     background-color: rgb(175, 107, 107);
+    padding: 35px;
 }
 
 .filter {
@@ -88,13 +89,13 @@ li {
 }
 
 .input {
-    height: 25px;
-    size: 33px;
+    height: 45px;
+    size: 35px;
 }
 
 #adding {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
 }
 
 h1 {
@@ -107,5 +108,5 @@ h1 {
     background-color: white;
     padding: 15px;
     border-radius: 1px;
-    font-size: 12px;
+    font-size: 15px;
 }
