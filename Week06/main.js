@@ -6,7 +6,7 @@ addButton.addEventListener('click', function() {
     const todo = new ToDo();
     todo.addingToList();
     todo.showList();
-    // todo.addFilterEventListener();
+    todo.addFilterEventListener();
     //todo.addRemoveListener();
 });
 window.addEventListener('load', () => {
