@@ -42,7 +42,9 @@ export default class ToDo {
             array.addEventListener('click', function(e) {
                 if (e.target.tagName === 'LI') {
                     checkedListItem(e.target.id); //ojo
-                    location.reload();
+                    //location.reload();
+                    let list = retrievingList(null);
+                    renderList(document.getElementById("toDoList"), list);
                 }
             });
             console.log(array);
@@ -54,7 +56,9 @@ export default class ToDo {
             for (let i = 0; i < array.length; i++) {
                 array[i].addEventListener('click', function(e) {
                     removedFromList(e.target.id); //ojo
-                    location.reload();
+                    //location.reload();
+                    let list = retrievingList(null);
+                    renderList(document.getElementById("toDoList"), list);
                 });
             }
         }
