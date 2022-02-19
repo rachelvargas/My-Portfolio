@@ -78,6 +78,7 @@ li {
     padding-bottom: 15px;
     font-size: 15px;
     margin-left: 20px;
+    padding: 15px;
 }
 
 #actions {
@@ -109,20 +110,26 @@ h1 {
 #taskLeft {
     background-color: white;
     padding: 15px;
-    border-radius: 1px;
+    border-radius: 3px;
     font-size: 15px;
 }
 #all{
     height: 50px;
     width: 40px;
+    padding: 15px;
+     border-radius: 3px;
 }
 #completed{
     height: 50px;
     width: 80px;
+    padding: 15px;
+     border-radius: 3px;
 }
 #active{
      height: 50px;
      width: 60px;
+     padding: 15px;
+     border-radius: 3px;
 }
     
     
