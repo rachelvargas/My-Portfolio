@@ -16,8 +16,8 @@ html {
 .form {
     position: absolute;
     width: 100%;
-    bottom: 15px;
-    padding: 35px;
+    bottom: 50px;
+    padding: 40px;
     text-align: center;
 }
 
@@ -78,7 +78,6 @@ li {
     padding-bottom: 15px;
     font-size: 15px;
     margin-left: 20px;
-    width: 65px;
 }
 
 #actions {
@@ -94,8 +93,11 @@ li {
 }
 
 #adding {
-    height: 40px;
-    width: 40px;
+    height: 55px;
+    width: 55px;
+    font-size:30px;
+    background-color: rgb(0, 26, 255);   
+
 }
 
 h1 {
@@ -110,3 +112,19 @@ h1 {
     border-radius: 1px;
     font-size: 15px;
 }
+#all{
+    height: 40px;
+    width: 30px;
+}
+#completed{
+    height: 40px;
+    width: 60px;
+}
+#active{
+     height: 40px;
+     width: 40px;
+}
+    
+    
+    
+
