@@ -5,8 +5,8 @@ const outputDiv = document.getElementById('output');
 
 
 //assigning some URLs to variables:
-const textURL = 'http://numbersapi.com/random';
-const apiURL = 'http://api.chucknorries.io/jokes/random';
+const textURL = 'http://numbersapi.com/';
+const apiURL = 'http://api.chucknorries.io/jokes/';
 
 //assigningan event handler to each button
 textButton.addEventListener('click', () => {
