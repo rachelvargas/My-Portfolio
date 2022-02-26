@@ -59,7 +59,8 @@ function addTask(event) {
         .catch(error => console.log('There was an error:', error))
 } */
 //the same code already cut by FromData
-FormData.addEventListener('submit', addTask, false);
+const form = document.forms['todo'];
+form.addEventListener('submit', addTask, false);
 
 function addTask(event) {
     event.preventDefault();
