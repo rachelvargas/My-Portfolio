@@ -9,7 +9,105 @@
   
 <body>
   <h1>Ajax Notes and Excercises</h1>
-    <script src="main.js" type="module"></script>
-</body>
+	<h2>Clients and Servers</h2>
+	<p><strong> Client </strong>- web browser- , request a resource(a web page) from a server<br>
+	<p><strong> Server</strong>, processes the request and sends back a response to the client</p>
+ <p>Ajax allows Javascript to request resources from a sever on behalf of the client.<br>
+  The resources requested are usually JSON data or small fragments of text or HTML rather than the whole page.<br>
+ <p> Asynchronous JavaScript and XML - different parts of the process:<br>
+	 <strong> Asynchronous</strong>,<br>
+ *"When a request for data is sent, the program doesn’t have to stop and <br>
+ * wait for the response. It can carry on running, waiting for an event to<br>
+ *  fire when a response is received. By using callbacks to manage this,<br>
+ *  programs are able to run in an efficient way,<br> 
+ * avoiding lag as data is transferred back and forth."
+	 <strong>JavaScript</strong>,<br>
+ * Ajax enabled Javascript to send equest and recieve responses from a server, allowing content to be updated in real time<br>
+	 <strong>XML</strong>,<br>
+ * when the term ajax was originally coined, XML documents were often used to return data.<br>
+ * Nowadays, JSON is the most commonly used in Ajax. JSON also is natively supported in javascript,<br>
+ * so we can deal with javascript objects rather than having to parse XML files by using DOM methods<br>
+ * With the ecplosion in the use fo public APIs, ajax is used more than ever to transport data back and forth between sites.</p>
+ */
+	<h2>APIs - Application Programming Interface- </h2>
+ <p>is a collection of methods that allows external access to another program or service.<br>
+  So, developers are able to interac with the data and create mashuops of third party services like,<br>
+ a weather site that have an API provides methods that return information about the weather in a given location, as temperature, wind speed etc.</p>
+   
+	<h2>The Fetch API</h2>
+  <p>is currently a living standard for requesting and sending data asynchronously across a network.<br>
+   Uses promises to avoid callbk hell.<br>
+   streamlines a nmber of cocepts that had become cumbersome when using the XMLHttpRequest object</p>
+  
+	<h2>Basic Usage</h2>
+	<p><strong>fetch()</strong>, global method that only has one mandatory argument, which is the URL of the reource
+		we wish to fetch.<br>
 
+	<strong> Rsponse Interface</strong><br>
+  Response objects have a number of properties and methods that allow us to process the response effectively.</P>
+ 
+<p>Some other properties of the Response object are:<br>
+	<strong>headers</strong> A Headers object containing any headers associated with the response<br>
+	<strong>url</strong> A string containing the URL of response<br>
+	<strong>redirected </strong> A boolean value that specifies if the response is the result of a redirect<br>
+	<strong>type</strong> A string value of 'basic', 'cors', 'error' or 'opaque'. A value of 'basic' is used for a response from the same domain.<br>
+A value of 'cors' means the data was received from a valid cross-origin request from a different<br>
+omain. A value of 'opaque' is used for a response received from 'no-cors' request from another domain, which means access to the data will be severely restricted. A value of 'error' is used when a network error occurs. </p>
+	<p><strong> redirect()</strong> method can be used to redirect to another URL. <br>
+		* It creates a new promises that resolves to the responsfron the redirected</p>
+
+
+	<p><strong>Text Response</strong>
+ * text() method takes a stream of text from the response,<br>
+ * reads it to completion and<br>
+ * returns a promises that resolves to USVSting object that can be treated as a string in JavaScript</p>
+
+	<p><strong>File Responses</strong><br>
+		<strong> blob()</strong> method is used to read a file of raw data, such as an image or a spreadsheet.<br>
+ * once it has read the whole file, <br>
+ * it returns a promise that resolves with a blob object<br>
+ 
+	<p><strong>JSON Response</strong><br>
+ * json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a javascript object</p>
+ 
+
+	<h2>REquest Interface</h2>
+	<p><strong>providing Request()</strong> object as an argument allows a number of options to be set about request<br>
+		* <strong>Request objects are created using the Request() constructor, and include:</strong><br>
+		<strong> url </strong>The URL of the requested resource (the only property that is required).<br>
+		<strong>method </strong>, a string that specifies which HTTP method should be used for the request. By default, this is 'GET'.<br>
+		<strong> headers</strong >This is a Headers objec that provides details of the request's headers.<br>
+		<strong> mode</strong>Allows you to specify if CORS is used or not. CORS is enabled by default.<br>
+		<strong>cache</strong>  Allows you to specify how the request will use the browser's cache.<br> 
+		<strong> credentials</strong> Lets you specify if cookies should be allowed with the request.<br>
+		<strong>redirect</strong> Specifies what to do if the response returns a redirect. </p>
+ 
+
+	<h2>Hypertext Transfer Protocol - HTTP-</h2>
+ <p> when client(browser) makes a request to a server, the HTTP is use to tell the 
+ server what type of request is being made, then the server will deal with the request<br>
+	 <strong>The five most commonly used:</strong><br>
+	 <strong>GET </strong>requests to retrieve resources<br>
+	 <strong>POST</strong> requests, usually used to create a resource but can actually perform any task<br>
+	 <strong>PUT</strong> requests to upsert, which means insert a resource or update it entirely<br>
+	 <strong>PATCH</strong> requests to make partial updates to a resource<br>
+	 <strong>DELETE</strong> requests to delete a resources.</p>
+ 
+
+
+	<h2>Headers Interface</h2>
+ <p>HTTP headers are used to pass on any additional about a request or response.<br>
+	 <strong> includes:</strong><br>
+ *  the file-type of the reource,<br><br>
+ * cookie information,
+ * authentication information and<br>
+ * when the resource was last modified<br>
+ * It can be used to create a Headers object, which can be added as a property of Request and REsponse objects </p?
+ 
+
+
+
+
+
+	</body>
 </html>
