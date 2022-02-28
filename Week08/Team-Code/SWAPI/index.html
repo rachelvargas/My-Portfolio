@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Start Wars</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel='stylesheet' type="text/css" href='styles.css'>
+</head>
+
+<body>
+    <main>
+        <h1>Star Wars Ships</h1>
+        <div class="list">
+            <table class="ships">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Crew</th>
+                        <th>Model</th>
+                        <th>Starship Class</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <a id="prev" href="#">&lt;-Prev</a> <a id="next" href="#">Next -&gt;</a>
+        </div>
+        <div id="details" class="hidden">
+            <dl>
+                <dt>Name:</dt>
+                <dd class="name"></dd>
+                <dt>Length:</dt>
+                <dd class="length"></dd>
+                <dt>Cargo Capacity:</dt>
+                <dd class="cargo_capacity"></dd>
+                <dt>Passangers:</dt>
+                <dd class="passangers"></dd>
+                <dt>Consumables:</dt>
+                <dd class="consumables"></dd>
+                <dt>Max Atmosphering Speed:</dt>
+                <dd class="max_atmosphering_speed"></dd>
+            </dl>
+        </div>
+    </main>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

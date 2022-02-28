@@ -1,0 +1,63 @@
+body {
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.hidden {
+    display: none;
+}
+
+#ships td {
+    cursor: pointer;
+}
+
+#details {
+    flex: 1 0 15em;
+    padding: 1em;
+    text-align: center;
+    border: 3px double;
+}
+
+#details dl {
+    border: 1px solid;
+    text-align: left;
+}
+
+#ships {
+    /* display: flex; */
+    flex-flow: row wrap;
+    list-style-type: none;
+}
+
+#ships thead {
+    background-color: rgb(243, 131, 131);
+}
+
+#ships tr {
+    border: 1px solid;
+    padding: 0.5em;
+    height: 44px;
+}
+
+#ships tr:nth-child(even) {
+    background-color: rgb(21, 202, 202);
+}
+
+#ships tr:hover {
+    background-color: rgb(238, 144, 29);
+    text-decoration: underline;
+}
+
+thead {
+    color: green;
+}
+
+table,
+th,
+td {
+    border: 2px solid black;
+}
