@@ -8,8 +8,8 @@
 </head>
   
 <body>
-  <h1>Ajax Notes and Excercises</h1>
-	<h2>Clients and Servers</h2>
+  <h2>Ajax Notes and Excercises</h2>
+	<h3>Clients and Servers</h3>
 	<p><strong> Client </strong>- web browser- , request a resource(a web page) from a server<br>
 	<p><strong> Server</strong>, processes the request and sends back a response to the client</p>
  <p>Ajax allows Javascript to request resources from a sever on behalf of the client.<br>
@@ -29,17 +29,17 @@
  * so we can deal with javascript objects rather than having to parse XML files by using DOM methods<br>
  * With the ecplosion in the use fo public APIs, ajax is used more than ever to transport data back and forth between sites.</p>
  */
-	<h2>APIs - Application Programming Interface- </h2>
+	<h3>APIs - Application Programming Interface-</h3>
  <p>is a collection of methods that allows external access to another program or service.<br>
   So, developers are able to interac with the data and create mashuops of third party services like,<br>
  a weather site that have an API provides methods that return information about the weather in a given location, as temperature, wind speed etc.</p>
    
-	<h2>The Fetch API</h2>
+	<h3>The Fetch API</h3>
   <p>is currently a living standard for requesting and sending data asynchronously across a network.<br>
    Uses promises to avoid callbk hell.<br>
    streamlines a nmber of cocepts that had become cumbersome when using the XMLHttpRequest object</p>
   
-	<h2>Basic Usage</h2>
+	<h3>Basic Usage</h3>
 	<p><strong>fetch()</strong>, global method that only has one mandatory argument, which is the URL of the reource
 		we wish to fetch.<br>
 
@@ -71,7 +71,7 @@ omain. A value of 'opaque' is used for a response received from 'no-cors' reques
  * json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a javascript object</p>
  
 
-	<h2>REquest Interface</h2>
+	<h3>REquest Interface</h3>
 	<p><strong>providing Request()</strong> object as an argument allows a number of options to be set about request<br>
 		* <strong>Request objects are created using the Request() constructor, and include:</strong><br>
 		<strong> url </strong>The URL of the requested resource (the only property that is required).<br>
@@ -83,7 +83,7 @@ omain. A value of 'opaque' is used for a response received from 'no-cors' reques
 		<strong>redirect</strong> Specifies what to do if the response returns a redirect. </p>
  
 
-	<h2>Hypertext Transfer Protocol - HTTP-</h2>
+	<h3>Hypertext Transfer Protocol - HTTP-</h3>
  <p> when client(browser) makes a request to a server, the HTTP is use to tell the 
  server what type of request is being made, then the server will deal with the request<br>
 	 <strong>The five most commonly used:</strong><br>
@@ -95,7 +95,7 @@ omain. A value of 'opaque' is used for a response received from 'no-cors' reques
  
 
 
-	<h2>Headers Interface</h2>
+	<h3>Headers Interface</h3>
  <p>HTTP headers are used to pass on any additional about a request or response.<br>
 	 <strong> includes:</strong><br>
  *  the file-type of the reource,<br><br>
