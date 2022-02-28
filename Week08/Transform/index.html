@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 portfolio</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+   <h2>CSS3 Transorms and Transitions<h2>
+     <p><strong>Transform:</strong><br>
+ transform property let us translate, rotate, scale, and/or skew element on the page.<br>
+       Its value is one or more transform functions that will be applied on the order thy're provided</p>
+ <p><strong>Translation:<strong><br>
+ translation functions allow to move elements left, right, up or down.
+ Are similar to the behavior of position:relative; when ceclaring top and left, moving elements
+ up and down of left and right aling the x and y axes. </p
+ 
+
+
+   <h2>Scaling:</h2>
+   <p>The <strong>scale(x,y)</strong>function scales an element by the defined factors horizontally then vertically.<br>
+ * If only one value is provided, it will be used for boththe x and y values, growing or shrinking your element or pseudo-element while maintaining the original aspect ratio.
+ * scale(x) and scale(y) functions will scale only the horizontal or only the vertical dimensions respectively.<br>
+ * to delcare multiple transformations, we need to add a scale to the end of the space-sparated  list.<br>
+ * Also, if we scale inline-block elements, text around it will fail to accommodate it with reflowing.<br>
+ * If so , we need to adjust height, width, or font-size instead of using scale() transform</p>
+ 
+<h2>Rotation:<h2>
+  <p><strong> rotate()</strong> function rotates an element around the point of origin by a specified angle value.<br>
+ * generally, angles are declared in degrees, with positve(clockwise) and negative(counterclockwise)</p>
+
+
+  <h2>Transitions:</h2>
+ <p>allow the values of CSS prperties to change over time, essentially providing simple animations.
+ with CSS transition property the color tansition ca be gradual.<br>
+   
+   <strong>steps to create a simple transition using only CSS:</strong>
+* 1- Declare the original state of the element in the default style declaration.<br>
+* 2- Declare the final state of your transitioned element; for example, a :hover state.<br>
+* 3- Include the transition functions in your default style declaration using the 
+transition properties, including: transition-property, transition-duration, 
+transition-timing-function, and transition-delay. We’ll look at each of these
+ and how they work shortly.<br>
+ transition-property, property defines the CSS properties of the element that should be transitioned,
+   with all for  all properties as default.</p>
+ 
+
+<h2>Supporting Older Browsers<h2>
+ <p>to support older browsers , we need to include the-webkit- prefix  for all of the transition properties:<br>
+   -webkit-transition-property: -webkit-transform;</p>
+   
+
+  <p><strong>The ransition-duration Property:</strong>
+ * sets how long the transition will take,<br>
+ * it can be specify this either seconds, s, or milliseconds ms, <br>
+ * Transition-duration: 0.2s;<br>
+    * 200ms, is considered the optimum time for transitions, slower make seem the webiste slow</p>
+ 
+
+<h2>he transition-timing-function Property<h2>
+ <p> Lets us control the pace of the transition in even more granular detail.<br>
+  <strong>The most common timing functions:</strong><br>
+  <strong>ease</strong>,has a slow start, then speedsup, and slowly.<br>
+  <strong>linear</strong>, creates a transition that animates at a constant speed.<br>
+  <strong>ease-in</strong>, creates a transition that is slow to start but gain speed, then stops abruptly.<br>
+  <strong>ease-out</strong>, starts at full speed, then slows progressively as it reaches the conclusion of the transition:<br>
+ (transition-timing-function: ease-out;)<br>
+  <strong>ease-in-out</strong>, accelerates more sharply at the beginning.<br>
+  <strong>cubic-bezier</strong> fuction, accepts four numeric parameters to better difine the timming funtcion<br>
+  steps function defines the nuber of steps and the direction of either start or end.</p>
+
+   
+   <script src='main.js' type='module'></script>
+
+  </body>
+</html>
