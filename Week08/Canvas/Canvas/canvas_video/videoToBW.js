@@ -112,22 +112,6 @@ function drawOneFrame(video, context, canvas) {
  * -telling Data Transfer that we want to save some plain text by passing in the string text/plain
  * then, give it the ID of our mouse image:
  */
-var mice = document.querySelectorAll("#mouseContainer img")
-
-var mouse = null;
-for (var i = 0; i < mice.length; i++) {
-    mouse = mice[i];
-    mouse.addEventListener('dragstart', function(event) {
-        // handle the dragstart event
-        event.dataTransfer.setData("text/plain", this.id);
-    });
-}
-
-//handle the dragover event:
-var cat = document.getElementById('cat');
-cat.addEventListener("dragover", function(event) {
-    event.preventDefault();
-});
 
 /**lets drop handler:
  *  1- figure out what the cat should say when a mouse is dropped on it. 
@@ -143,24 +127,38 @@ cat.addEventListener("dragover", function(event) {
 //associating each response with the ID of one of the mouse images:
 // grab the h2 element that we’ll change to reflect the cat’s response:
 // retrieve the ID by writing another method called getData:
-cat.addEventListener("drop", function(event) {
-    var mouseHash = {
-        mause1: 'NOMNOMNOM',
-        mouse2: 'Meow',
-        mouse3: 'Purrrrrr ...'
-    }
-    var catHeading = document.getElementById('catHeading');
-    var mouseID = event.originalEvent.dataTransfer.getData("text/plain");
 
-    //change the text to the appropriate response:
-    catHeading.innerHTML = mouseHash[mouseID];
+var mice = document.querySelectorAll("#mouseContainer img");
+var mouse = null;
+for (var i = 0; i < mice.length; i++) {
+    mouse = mice[i];
+    mouse.addEventListener('dragstart', function(event) {
+        // handle the dragstart event
+        event.dataTransfer.setData("text/plain", this.id);
+        
+        //handle the dragover event:
+        var cat = document.getElementById('cat');
+        cat.addEventListener("dragover", function(event) {
+            event.preventDefault();
+        cat.addEventListener("drop", function(event) {
+        var mouseHash = {
+            mause1: 'NOMNOMNOM',
+            mouse2: 'Meow',
+            mouse3: 'Purrrrrr ...'
+        }
+        var catHeading = document.getElementById('catHeading');
+        var mouseID = event.originalEvent.dataTransfer.getData("text/plain");
 
-    //Given that the mouse has now been “eaten,” 
-    //it makes sense to remove it from the page:
-    var mousey = document.getElementById(item);
-    mousey.parentNode.removeChild(mousey);
+        //change the text to the appropriate response:
+        catHeading.innerHTML = mouseHash[mouseID];
 
-    //prevent the default behavior of not allowing elements to be
-    //dropped on our cat image, as we did before:
-    event.preventDefault();
+        //Given that the mouse has now been “eaten,” 
+        //it makes sense to remove it from the page:
+        var mousey = document.getElementById(item);
+        mousey.parentNode.removeChild(mousey);
+
+        //prevent the default behavior of not allowing elements to be
+        //dropped on our cat image, as we did before:
+        event.preventDefault();
 });
+        }
