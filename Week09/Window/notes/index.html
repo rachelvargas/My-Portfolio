@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Window</title>
+</head>
+
+<body>
+    <h2>The Window Object</h2>
+  <h3>The Browser Object Model-BOM-</h3>
+  <p>
+ * is a collection of properties and methods that contain information about the browser and computer screen<br>
+ * The BOM only makes sense in a browser environment, but <br>
+ * they will still have a global object.<br>
+ * I you don't know the name of global object , you can efer to it using the keyword this.
+  </p>
+
+  <p><strong>Going Global</strong>
+ * global variables can be accessed in all parts of the program,<br>
+ * are actual properties of a global object.<br>
+ *In the browser envronment, the global object is the window object, so any global variable created is actually aproperty otf the window obkect
+  </p>
+  
+
+  <p><strong>parseInt()</strong> and <strong>isNAN()</strong> functions are methods of the global obeject:,<br>
+window.parseInt(4.2);<br>
+
+window.isNaN(4.2);<br>
+
+ES6 made parseInt() and isNaN() methods of the Number object, so they can be both be called using the following code:<br>
+
+Number.parseInt(4.2);<br>
+
+Number.isNaN(4.2);<br>
+
+  <h3>Dialogs:</h3<p>
+    * <strong>window.alert()</strong> method will pausethe execution of the program and display a message in a dialog box.<br>
+ * The message is provided as an argument to the method, and undefined is always returned<br>
+    * window.alert('Hello');</P>
+  <p>
+ 
+    *<strong> window.confirm()</strong> method will stop the excution of the program and display a confirmation dialog that shows the message provided as an argument , <br>
+ * and givin the options of OK or Cancel.It returns the boolean values of true if the user clicks ok, and<br>
+ * false if the user clicks Cancel.<br>
+    * window.confirm('Do you wish to continue?');</p>
+
+  <p>
+    <strong>window.prompt()</strong> method will stop the excution of the program.Displays a dialog that shows a message provided as an argument, as well as an inut field that allowas the user to enter text.<br>
+this text is then returned as a string when the user clicks Ok. If the user clicks Cancel. null is returned<br>
+window.prompt('Please enter your name:');
+  </p>
+  <p>
+
+<strong> Browser Information<strong><br>
+ * The window object has a number of proeprties and methods that provide information about the user's browser</p>
+  <p>
+ 
+    <strong>Which Browser:</strong>
+ * -window object has a navigator property that returns a reference to the Navigator object<br>
+ * -the Navigator object conatains information about the browser being used. <br>
+ * Its userAgent property will return information about the browser and operation system being used
+  </p>
+
+  <h3>Location, Location, Location</h3>
+  <p>
+    *<strong> -window.location</strong> property ia an object that contains information about the URL of the current page.<br>
+ * It contains a number of properties that provide information about different fragments of the URL.<br>
+    *<strong> -The href</strong> property returns the full URL as a string:<br>
+ * window.location.href<br>
+    * <strong>-The protocol </strong> property returns a string describing the protocol used (http, https, pop2, ftp etc)<br>
+ * window.location.protocol <br>
+    *<strong> -the host</strong> property returns a string describing the domain of the current URL and the port nnumber <br>
+window.location.host<br>
+    *<strong>-The hostname</strong> property returns a string describing the domanin of the current URL:<br>
+window.location.hostname<br>
+
+    * <strong>-The port </strong>property returns a string describing the port number, it will return an empty string if the port is not explicity sated in the URL:<br>
+window.location.port<br>
+
+    *<strong>-pathname</strong> property returns a string of the path that follows the domain:<br>
+window.location.pathname
+
+    *<strong>-the search</strong> property returns a string that statrs with a "?" follwed by the query string parameters.<br>
+It returns an empty string if there are no query string parameters, <br>
+window.location.search<br>
+
+    *<strong>-the hash </strong> property returns a string that starts with a "#" followed by the fragment identifier.<br>
+It returns an empty string if there is no fragment identifier<br>
+window.location.hash<br>
+
+    *<strong>-origin</strong> property returns a string that shows the protocol and domain where the current page originated from.<br>
+This property is read-only, so cannot be change:<br>
+    window.location.origin</p>
+
+<p>
+
+  <strong>window.location has these methods:</strong><br>
+  * <strong>-The assign()</strong>method can be used to load another resource from a URLprovided as a parameter:<br>
+ * window.location.assign('https://www.sitepoint.com/')<br>
+  *<Strong> -The replace()</strong>, the current page will not be stored in the session history, so the user will be unable to navigaate back to it using the back button<br>
+  * <Strong>-The toString()</strong> method returns a string conatining the whole URL:<br>
+ * window.location.toString();<br>
+
+<h3>The Browser History<h3>
+  <p>
+    * <strong>-the window.history</strong> property can be used to access information about any previously visited pages in the current browser session.<br>
+    *<strong> -the window.history.length</strong> property shows how many pages have been visited before arrigving at the current page<br>
+    *<strong> -the window.history.go()</strong> method can be used to go to a specific page, where 0 is the current page:<br>
+ window.history.go(1); // goes forward 1 page<br>
+window.history.go(0); // reloads the current page<br>
+window.history.go(-1); // goes back 1 page<br>
+    <strong>-the window.history.forward() and window.history.back()</strong> methods can be used to navigate forwards and backwards by one page respectivey,
+  </p>
+
+  <h3>Controlling Windows</h3>
+  <p>
+    * <strong>-The window.open()</strong> method, takes the URL of the page to be opened as its first parameter, <br>
+ * the window title as its second parameter, and <br>
+ * a list of attributes as the third parameter and can be assign to a variable:<br>
+ 
+    *<strong>-the close()</strong> method can be used to close a window, assuming we have a reference to it:<br>
+popup.close();<br>
+    *<strong>-the window.moveTo()</strong> method takes two parameters that are the X And Y coordinates of the screen that the window is to be move to <br>
+window.moveTo(0,0); // will move the window to the top-left corner of the screen<br>
+    *<strong>-the window.resizedTo()</strong> method takes two parameters that specify the width and height of the resized window's dimmensions:<br>
+    window.resizeTo(600,400);</p>
+ 
+
+
+  <p><strong>Screen Information</strong><br>
+    *<strong> -the window.screen </strong> object conatins information about the screen the browser is displayed on.<br>
+    *<strong> -the availHeight and availWidth</strong> can be used to find the heigth and width of the screen, excluding any operation system menus:<br>
+    *<strong> -the colorDepth</srong> property can be used to find the color bit depth of the user's 
+ 
+
+  <h3>The Document Object:</h3>
+  <p>
+    * <strong>--document.write():</strong><br>
+    * <strong>-the write()</strong> method simply writes a string of text to the page.If a page has already loaded, it will completely replace the current document:<br>
+ * document.write('Hello, world!');<br>
+ * this method can also be used withing a document inside script tags to inject a string into the markup. but will not ovrewrite the rest of the HTML on the page</p>
+ 
+
+
+  <p><Strong>The Path and Domain of Cookies </strong><br>
+ * for security reasons, the cookies can only be read by pages inside the same directory and odmain as the file was set.<br>
+ * The path can be changed , so any page in the root directory can read the cookie by adding the string ; path=/:<br>
+    * document.cookie = 'name=Batman; path=/'</p>
+ 
+  <p><strong>Deleting Cookies</strong><br>
+ * it need to set it to expire at a time in the past:<br>
+    * document.cookie = 'name=Batman; expires=Thu, 01 Jan 1970 00:00:01 GMT';</p>
+ 
+
+<h3>Timing Functions:<h3>
+  * <strong>--setTimeout()</strong><br>
+ * <strong>-window on=bject<strong> provides soe useful methods for scheduling the execution of a function:<br>
+  * <Strong>-the window.setTimeout()</strong> method accepts a callback to a function as its first parameter and a number of millisenconds as its second parameter,<br>
+  * <Strong>--setInterval()</strong><br>
+  * <strong>-the window-setInterval()</strong> method works in a similar way, except that it will repeatdly invoke the callback function after every givien nunber of millisecons:<br>
+  </p>
+  
+
+   
+</body>
+
+</html>
+
+</html>
