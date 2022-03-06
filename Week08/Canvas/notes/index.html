@@ -9,9 +9,89 @@
 </head>
 
 <body>
-    <h1>Canvas, SVG, and Drag and Drop</h1>
+    <h2>Canvas, SVG, and Drag and Drop</h2>
+    <h3>Drawing a Rectangle to the Canvas</h3>
+    <p> <strong>fillRect<strong> and <strong>strokeRect</strong> methods, take the X and Y coordinates where we want to begin drawing the fill or the stroke, and the 
+ width and height of the rectangle</p>
+    
+        <h3>The Canvas Coordinate System</h3>
+        <p><strong>in the canvas coordinate system:</strong><br>
+ *the top-left corner is (0,0)<br>
+ * if the canvas is 200 pixels by 200 pixwla , then the bottom-right corner is (200,200)
+        </p>
 
-    <script src='main.js'></script>
+        <h5>Variation on fillStyle:</h4>
+        <p> CanvasGradient and CanvasPattern</p>
+  
+    
+        <h3>anoympus Functions</h3>
+ <p>are like regular functions except, they are without names.<br>
+     the code inside anonympus function will be run when the load event is fired </p>
+        <h3>create CanvasGradient</h3> 
+        <p><trong>to create a canvas gradient:</strong>
+ * -call one of two methods: <br>
+ * -createLinearGRadient() or<br>
+ * -createRAdialGRadient,<br>
+ * then add one or more color stopss to the gradient<br>br>
+            * x1 and y1 represent the ending location</p>
+ 
+    
+        <p>arc is a segment of a cirlce</p>
+
+        <p><strong>Radians Explained</strong><br>
+            Radians are unit used to measure angles, and the symbol pi denotes a measurement in radians</p>
+ 
+        <p><strong>Saving Canvas Drawings</strong><br>
+ * -toDataURL method , creates a URL with the image in it, we can right- the imaage at this URL, and save it as PNG or jpeg</p>
+ 
+
+        <h3>Manipulating Images</h3>
+        <p>
+ * getImageData method help us to manipulate the pixels of the image from the Canvas API,<br>
+ * also will return ImageData obectj,and allows us to examine a small section of canvas. It takes four parameters corres[onding to the<br>
+ * four corneres of a rectangle piece of the canvas]<br>
+ * ImageData object, conatins three properties:<br>
+ * -widht, height, and data.<br>
+ * -data, conatins information about the pixels in the ImageData object in the form of an array.
+        </p>
+
+        <h3>SVG - Scale Vector Graphics-</h3>
+        <p>
+ * a specific file format that allows us to describe vector graphics using XML<br>
+ * -XML - eXtensible Markup Language, it is a system meant to annotate text.It tags are used to <br>
+            * decribe data, such as the content of a file</p>
+
+
+        <h3>Drawing in SVG:</h3>
+        <p>
+ * -viewBox attribute defines the starting location, width, and height of the SVG image<br>
+ * -circle element defines a circle with cx and cy the X and Y coordinates of the center of the circle.<br>
+ * -r the radius is represented with<br>
+ * -fill defines the fill style<br>
+ * -<desc> tag allows us to provide a description for the image we're going to draw<br>
+ * <rect> t
+            </p>
+
+
+            <h3>The Data Transfer Object </h3>
+            <p>
+ * are one type of object outlinec in the DRag and Drop API. <br>
+ * allows us to set and get data about the elements that are being dragged.<br>
+ * -it let us difine two pieces of information:<br>
+ * the type of data we’re saving of the draggable element and <br>
+ * the value of the data itself
+            </p>
+
+            <h3Accepting Dropped </h3>
+            <p>
+ * first, we need to create two more events:<br>
+ * -dragover, fires when we drag an item over an element, and<br>
+ * -drop, fires when er drop an item on it<br>
+ * we need to prevent the default behavior for both these events, since default prohibits us from dropping an element<br>
+ * canvas.html
+            </p>
+
+   
 </body>
 
 </html>
