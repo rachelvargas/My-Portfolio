@@ -146,19 +146,21 @@ for (var i = 0; i < mice.length; i++) {
             mouse2: 'Meow',
             mouse3: 'Purrrrrr ...'
         }
-        var catHeading = document.getElementById('catHeading');
-        var mouseID = event.originalEvent.dataTransfer.getData("text/plain");
+var catHeading = document.getElementById('catHeading');
+var mouseID = event.originalEvent.dataTransfer.getData("text/plain");
 
-        //change the text to the appropriate response:
-        catHeading.innerHTML = mouseHash[mouseID];
+//change the text to the appropriate response:
+catHeading.innerHTML = mouseHash[mouseID];
 
-        //Given that the mouse has now been “eaten,” 
-        //it makes sense to remove it from the page:
-        var mousey = document.getElementById(item);
-        mousey.parentNode.removeChild(mousey);
+//Given that the mouse has now been “eaten,” 
+//it makes sense to remove it from the page:
+var mousey = document.getElementById(item);
+mousey.parentNode.removeChild(mousey);
 
-        //prevent the default behavior of not allowing elements to be
-        //dropped on our cat image, as we did before:
-        event.preventDefault();
+//prevent the default behavior of not allowing elements to be
+//dropped on our cat image, as we did before:
+event.preventDefault();
 });
-        }
+       
+ }
+     
