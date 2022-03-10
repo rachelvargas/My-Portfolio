@@ -10,6 +10,120 @@
 
 <body>
     <h2>HTML5 APIs</h2>
+    <h3>HTML5:</h3>
+    <p><strong>The data- Attribute:</strong><br>
+        <strog> -data- </strong>attribute is a way of embedding data in a web page using custom attributes taht are ignored by the browser,<br>
+ it is also private to a page, so their unique purpose is to be used by a Javascript program.<br>
+  Its attributes  can be decided by the developer but they must follow this format:<br>
+ * Start with data-.<br>
+ * Contain only lowercase letters, numbers, hyphens, dots, colons or underscores.<br>
+ * Include an optional string value.<br></p>
+       
+
+    <h3>HTML5 Web Storage</h3>
+ <p> The Web Storage API provides a key-value store on the clients's computer that store information<br>
+ * about users, and specifici inforamtion that can be used during future sessions<br>
+     *<strong> -The Web Storage API differences with cookies:</strong>
+ * Information stored is not shared with the server on every request.
+ * Information is available in multiple windows of the browser (but only if the domain is the same).
+ * Storage capacity limit is much larger than the 4KB limit for cookies ( There is no actual limit in the specification, but most browsers have a limit set at 5GB per domain.).
+ * Any data stored does not automatically expire as it does with cookies. This potentially makes cookies a better choice for something like showing a popup once a day.
+    </p>
+
+
+
+<p>The event object sent by the event listener to the callback has a number of properties that provide information about the updated item:
+    <strong> key</strong> tells us the key of the item that changed<br>
+    <strong>newValue</strong> tells us the new value to which it has been changed<br>
+    <strong>oldValue</strong> tells us the previous value before it was changed<br.
+    <strong>storageArea</strong> tells us if it is stored in local or session storage. </p>
+
+
+<h3>Geolocation</h3>
+<p>
+  is used to obtain the geographical position of the device, so it can be used to find the user's
+  exact location, then link to nearby places or measure the speed at which the user is moving.
+  This information can be used to filter data based on your location.
+  Because of privacy concerns , permission to use this has to be granted by the user first:
+  navigator.geolocation.getCurrentPosition(youAreHere);
+</p>
+
+<p>The position object has several other properties that can be used to find out information about the location and movement of the device:<br>
+    <strong>position.speed</strong> property returns the ground speed of the device in meters per second.<br>
+    <strong>position.altitude</strong> property returns an estimate of the device’s altitude in meters above the WGS84 ellipsoid, which is a standard measurement for the center of the Earth.<br>
+    <strong>position.heading</strong> property returns the direction the device is moving in. This is measured as a bearing in degrees, clockwise from North.<br>
+    <strong>position.timestamp</strog> property returns the time that the position information was recorded. <br>
+</strong>position.accuracy</strong> property returns the accuracy of the latitude and longitude properties in meters, and can be used to know the town or city users are in, while at other times you may need their exact position.</p>
+<p>
+   <strong>watchPostion()</strong> method call a callback funtion every time the position of the
+ device is updated. Returns an Id that can be used to reference the position being watched:<br>
+const id = navigator.geolocation.watchPosition(youAreHere);</p>
+
+<h3>Websockets</h3>
+<p>
+  is a new protocol that allows two-way communication with a server - also known as push messaging.
+  so, a connection is kept open and responses are 'pushed to the client as soon as they are received
+    websocket.html</p> 
+
+<h3>Notifications API</h3>
+<p>
+  allows us to show messages using the system's notifications.
+  Before we can send notifications , we need to get permission granted by the user by using requestPErmission() method of a Notification global object.</p>
+ 
+<p>The constructor function's first parameter is the title of the notification, 
+and is required. The function also accepts a second parameter, which is an object of options. These include body that specifies any text 
+that you want to appear below the title, and icon where you can specify a
+    link to an image that will be displayed as part of the notification</p>
+
+<h3>Multimedia</h3>
+ <p>An audio clip can be inserted into a page with the <audio> tag, using the src attribute to point to the audio file:<br>
+<audio src='/song.mp3' controls>
+Your browser does not support the audio element.
+     </audio></p>
+ 
+
+<p>Checking Properties Are Available:</p>
+to ensure a value is returned, we should use an event listener that fires once the metadata has loaded:<br>
+video.addEventListener('loadedmetadata', () => { console.log(video.duration); });</p>
+<p>Audio and video clips also have a number of events that will fire when they occur, including:<br>
+    <strong> -The play event</strong>, which fires when the clip starts and when it resumes after a pause.<br>
+    <strong> pause event</strong>, which fires when the clip is paused<br>
+    <strong>The volumechange event</strong>, which fires when the volume is changed.<br>
+    <strong>The loadedmetadata event</strong>, which we saw in the note above, and which fires when all the video's metadata has loaded.<br>
+
+
+<p>The fill and stroke colors can be changed by assigning a CSS color to the fillStyle and strokeStyle properties respectively:<br>
+context.fillStyle = "#0000cc"; // a blue fill color <br>
+    context.strokeStyle = "#ccc"; // a gray stroke color</p>
+
+<p>The lineWidth property can be used to set the width of any line strokes drawn onto the canvas. It defaults to one pixel and remains the same until it’s changed:<br>
+    context.lineWidth = 4;</p>
+
+<p><strong>The fillRect()</strong> method can draw a filled-in rectangle. <br>
+ The first two parameters are the coordinates of the top-left corner, <br>
+ the third parameter is the width, and<br>
+    the last parameter is the height. <br>
+//produces a filled-in blue rectangle in the top-left corner of the canvas at coordinates (10,10) that is 100 pixels wide and 50 pixels high:<br>
+    context.fillRect(10, 10, 100, 50);</p>
+
+<p>strokeRect() method produces a rectangle that is not filled in. This will draw the outline of a rectangle underneath the last one:<br>
+    context.strokeRect(10, 100, 100, 50);</p>
+
+
+<p><strong>The arc()</strong> method can be used to draw an arc of a given radius from a particular point.
+ The first two parameters are the coordinates of the center of the arc; 
+ the next parameter is the radius, followed by the start angle, then 
+ the finish angle (note that these are measured in radians). 
+ The last parameter is a boolean value that says whether the arc should be drawn counter-clockwise.</p>
+
+
+<p><strong>fillText()</strong> method is used to write text onto the canvas. 
+ The first parameter is the text to be displayed,
+ next two parameters are the x and y coordinates, respectively.
+ The font property can be used to set the font style used, 
+ otherwise the style is inherited from the canvas element’s CSS setting
+ (note that it needs to be changed before the fillText() method is used to draw the text). 
+ 
 
     <script src='main.js'></script>
 </body>
