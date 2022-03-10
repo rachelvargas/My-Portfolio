@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>HTML5 APIs</title>
+</head>
+
+<body>
+    <h2>Using_Fetch</h2>
+  <h3>Using the Fetch API</h3>
+  <p><strong>Fetch API</strong> provides a JavaScript interface for acessing and manipulating parts of the HTTP pipeline, such as resquest and responses.
+ * Also provide a global fetch() method that provides an easy logical way to fetch network resources.
+ * Fetch() wont' reject on HTTP error status and,
+    * won't send cross-origin cookies unless you set the credetials init option</p>
+  
+  <h4>fetch quest:</h4>
+<p> to extract the JSON body content from the Response object, we use the json() method, which returns a second 
+ promise that resolves with the result of parsing the response body text as JSON. <br>
+
+  <p><strong>Supplying request options</strong><br
+  fetch method can optionaly accept a second parameter, an init object that allows us to control a number of different settings
+                                                   </p>
+
+<p>If you only want to send credentials if the request URL is on the same origin as the calling script, add credentials: 'same-origin'.</p>
+
+
+
+  <h3>Headers</h3>
+ <p> headers interface allows us to create our own headers object via the Headers() constructor.
+   a headers object is a simple multi-map of names to values:</p> 
+
+
+  <h3>Guard</h3>
+ <p> guard property is not exposed to the web but affects which mutation operations are allowed on the headers object<br>
+ 
+   <strong>some guard values:</strong><br>
+   <strong>none:</strong> default.
+   <strong>request: </strong> guard for a headers object obtained from a request (Request.headers).<br>
+   <strong>request-no-cors:</strong> guard for a headers object obtained from a request created with Request.mode no-cors.<br>
+   <strong>response:</strong> guard for a headers object obtained from a response (Response.headers).<br>
+   <strong>immutable: </strong>guard that renders a headers object read-only; mostly used for ServiceWorkers.
+  </p>
+
+  <h3>Response objects</he>
+  <p>The most common response properties you'll use are:<br>
+    <strong>Response.status </strong>— An integer (default value 200) containing the response status code.<br>
+    <strong>Response.statusText</strong> — A string (default value ""), which corresponds to the HTTP status code message. Note that HTTP/2 does not support status messages.<br>
+    <strong>Response.ok</strong> —  a shorthand for checking that status is in the range 200-299 inclusive. This returns a boolean value.</p>
+ 
+
+
+  <h3>Body</h3>
+ <p> is an instance of any of these types:<br>
+ * ArrayBuffer<br>
+ * ArrayBufferView (Uint8Array and friends)<br>
+ * Blob/File<br>
+ * string<br>
+ * URLSearchParams<br>
+ * FormData</p>
+ 
+
+<p>The Request and Response interfaces share the following methods to extract a body.
+ *  These all return a promise that is eventually resolved with the actual content:<br>
+ * Request.arrayBuffer() / Response.arrayBuffer()<br>
+ * Request.blob() / Response.blob()<br>
+ * Request.formData() / Response.formData()<br>
+ * Request.json() / Response.json()<br>
+  * Request.text() / Response.text()</p>
+
+
+
+  <p><strong>Feature detection</strong><br>
+  Fetch API support can be detected by checking for the existence of Headers, Request, Response or fetch() on the Window or Worker scope:</p>
+
+    <script src='main.js'></script>
+</body>
+
+</html>
+
+</html>
