@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Validation</title>
+    <link rel='stylesheet' href='styles.css'>
+</head>
+
+<body>
+    <h1>Fruits</h1>
+    <!--input that allows you to choose whther you prefer a banana or a cherry.
+    add required attribute and matching the :invalid
+add pattern atribute-->
+    <form>
+        <label for="choose">Would you prefer a banana or cherry?</label>
+        <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
+        <button>Submit</button>
+    </form>
+    <!--<script src='main.js'></script>-->
+</body>
+
+</html>
