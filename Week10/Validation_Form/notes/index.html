@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Validation Form</title>
+</head>
+
+<body>
+    <h2>Validation Form</h2>
+  <h3>Client-side Form Validation</h3>
+  <p>Ensurement that all required form controls are  filled out in the correct format.
+    Helps ensure data submitted matches the requirements set forth in the various form controls.</p>
+  
+
+  <h3>Form Validation</h3>
+  <p>Is when we enter data, the browser and/or the web server will check to see that the data is in the 
+  correct format and within the constrainst set by the application.<br>
+    <strong>client-side validation</strong>, when validation is done in the browser<br>
+    <strong>server-validation</strong>, when validationis done on the server<br>
+  Main reasons to validate our forms:<br>
+  * 1- We want get the right data, in the right format<br>
+  * 2-We want to protect our users' data<br>
+  * 3- We want to protect ourselves
+  </p>
+
+  <p><strong>Different types of client-site validation</strong><br>
+   1- Built-in form validation: uses HTML5 form validation features<br>
+   2- Javascript validation: is coded using Javascript
+  </p>
+
+  <h3>Buil-in form validation</h3>
+  <p>validate most user data without relying on JAvascript.
+  use valiadtion attributes on form elements like:<br>
+    <strong>required:</strong> specifies whether a form field needs to be filled in before the form can be submitted<br>
+    <strong>minlenght and maxlength:</strong> specifies the minimum and maximum lenght of textual data(strings)<br>
+    <strong>min and max:</strong> specifies the minimum and maximum values of numerical input types<br>
+    <strong>types:</strong> specifies whether the data needs to be a number, and email address, or some other specific preset type<br>
+    <strong>pattern:</strong> specifies a regular expression that defines a pattern the entered data needs to follow
+  </p>
+  
+ <p>When an element is valid:<br>
+   The element matches the :valid CSS pseudo-class, which lets you apply a specific style to valid elements.
+I  the browser will submit the form, provided there is nothing else stopping it from doing so (e.g., JavaScript).
+  </p>
+
+ <p>When an element is invalid:<br>
+   The element matches the :invalid CSS pseudo-class, and sometimes other UI pseudo-classes (e.g., :out-of-range) depending on the error, which lets you apply a specific style to invalid elements.
+  The browser will block the form and display an error message
+  </p>
+
+
+ <p>Validation against a regular expression<br>
+   <strong>pattern attribute</strong>, expetcs a Regular Expresiion as its value,<br>
+   <strong>a regular expression (regex)</strong> is a pattern that can be used to match character combiantion in text strings, 
+  so they are ideal for form vaildation and serve a variety of other uses in javacript<br>
+   some examples:<br>
+   a — Matches one character that is a (not b, not aa, and so on).<br>
+  abc — Matches a, followed by b, followed by c.<br>
+  ab?c—Matches a, optionally followed by a single b, followed by c. ( ac or abc)<br>
+  ab*c—Matches a, optionally followed by any number of bs, followed by c. ( ac , abc, abbbbbc, and so on).<br>
+  a|b — Matches one character that is a or b.<br>
+   abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so on).
+  </p>
+
+  <h3>the Constraint Validation API</h3>
+  <p> consist of a set of methods and properties available on the following form element DOM interfaces:<br>
+  * HTMLButtonElement (represents a <button> element)<br>
+  * HTMLFieldSetElement (represents a <fieldset> element)<br>
+  * HTMLInputElement (represents an <input> element)<br>
+  * HTMLOutputElement (represents an <output> element)<br>
+  * HTMLSelectElement (represents a <select> element)<br>
+  * HTMLTextAreaElement (represents a <textarea> element)
+    </p>
+
+    <p>constraint validation properties:<br>
+      <strong>validationMessage: </strong>Returns a localized message describing the validation constraints that
+   the control doesn't satisfy (if any). If the control is not a candidate for
+  constraint validation (willValidate is false) or the element's value satisfies 
+   its constraints (is valid), this will return an empty string.<br>
+      <strong>validity:</strong> Returns a ValidityState object that contains several properties describing the validity state of the element.
+  below is listed a few of the more common ones:<br>
+      <trong>patternMismatch:</strong> Returns true if the value does not match the specified pattern, and false if it does match. 
+      <Strong>tooLong:</strong> Returns true if the value is longer than the maximum length specified by the maxlength attribute, 
+  or false if it is shorter than or equal to the maximum.<br>
+      <strong>tooShort:</strong> Returns true if the value is shorter than the minimum length specified by the minlength attribute, 
+  or false if it is greater than or equal to the minimum. <br>
+      <strong>rangeOverflow: </strong>Returns true if the value is greater than the maximum specified by the max attribute,
+  or false if it is less than or equal to the maximum. <br>
+      <strong>rangeUnderflow:</strong> Returns true if the value is less than the minimum specified by the min attribute,
+   or false if it is greater than or equal to the minimum. <br>
+      <strong>typeMismatch:</strong> Returns true if the value is not in the required syntax (when type is email or url),
+  or false if the syntax is correct. <br>
+      <strong>valid:</strong> Returns true if the element meets all its validation constraints,
+  and is therefore considered to be valid, or false if it fails any constraint. <br>
+      <strong>valueMissing:</strong> Returns true if the element has a required attribute, but no value, 
+  or false otherwise. <br>
+      <strong>willValidate:</strong> Returns true if the element will be validated when the form is submitted; false otherwise.
+    </p>
+
+ <p>The Constraint Validation API  methods:<br>
+   <strong>checkValidity():</strong> Returns true if the element's value has no validity problems; false otherwise.<br>
+   <strong>reportValidity(): </strong>Reports invalid field(s) using events. Useful in combination with preventDefault() in an onSubmit event handler<br>
+   <strong>setCustomValidity(message): </strong>Adds a custom error message to the element; if you set a custom error message, 
+  the element is considered to be invalid, and the specified error is displayed.<br>
+  This lets you use JavaScript code to establish a validation failure other than those offered by 
+  the standard HTML5 validation constraints. The message is shown to the user when reporting the problem. </p>
+
+ 
+    <script src='main.js'></script>
+</body>
+
+</html>
+
+</html>
