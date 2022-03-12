@@ -1,0 +1,101 @@
+body {
+    background: #5f1c1c;
+    font-family: 'Roboto', verdana, sans-serif;
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ee8f8f;
+    color: #5f1c1c;
+}
+
+h1 {
+    text-align: center;
+    color: #5f1c1c;
+    font-size: 40px;
+}
+
+.quakeStyle {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px double #db5454;
+}
+
+.quakeStyle>li:nth-child(n) {
+    background-color: #be9191;
+}
+
+.quakeStyle>li:nth-child(2n) {
+    background-color: #ee8f8f;
+}
+
+.quakeStyle {
+    padding: .6em 1.3em;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.quakeStyles li {
+    margin: 0.5em 0;
+}
+
+.quakeStyles div {
+    font-size: 0.8em;
+}
+
+
+/*fieldset {
+    display: flex;
+    flex-flow: row wrap;
+    border: round 3px;
+    margin: 0;
+    padding: 1.3em;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset p {
+    margin: .6em 0;
+    padding: 0 .7em;
+}
+
+fieldset p:last-child {
+    width: 100%;
+    text-align: center;
+}*/
+
+
+/*button {
+    background-color: #db5454;
+    color: #fffffb;
+    border: none;
+    border-radius: 5px;
+    height: 3em;
+}
+
+.hidden {
+    display: none;
+}*/
+
+.title {
+    font-weight: bold;
+}
+
+
+/*
+        .quakeStyles {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .quakeStyles li {
+            margin: 0.5em 0;
+        }
+        
+        .quakeStyles div {
+            font-size: 0.8em;
+        }
+    </style>*/
