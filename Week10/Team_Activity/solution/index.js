@@ -8,5 +8,5 @@ import buildNAvigation from './routing.js';
 const buildNAvigation = document.getElementById('mainNav');
 buildNAvigation(navElement);
 
-// const myQuakesController = new QuakesController('#quakeList');
-// myQuakesController.getQuakesByRadius();
+const myQuakesController = new QuakesController('#quakeList');
+myQuakesController.getQuakesByRadius();
