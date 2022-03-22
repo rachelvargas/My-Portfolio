@@ -1,5 +1,5 @@
 //getting the reference
-let json = ducment.getElementById('json');
+//let json = ducment.getElementById('json');
 
 //adding event listeners to the button on the HTML page
 document.getElementById('getCities').addEventListener('click', getCities);
