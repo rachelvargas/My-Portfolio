@@ -7,6 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>City Information</title>
     <link rel='stylesheet' href='styles.css'>
+     <script>
+            document.getElementById("flyaway ").addEventListener("click", function() {
+                this.classList.add('flownaway');
+                document.getElementById("gettingCountries ").classList.add("spin ");
+            });
+            document.getElementById("flyaway ").addEventListener("click", function() {
+                this.classList.add('flownaway');
+                document.getElementById("gettingSatates").classList.add("spin ");
+            });
+
+            document.getElementById("flyaway ").addEventListener("click", function() {
+                this.classList.add('flownaway');
+                document.getElementById("gettingCities").classList.add("spin ");
+            });
+        </script>
 </head>
 
 <body>
@@ -34,21 +49,7 @@
         <div id="flyaway"><button type='submit' id="gettingCities ">City Details</button></div>
 
 
-        <script>
-            document.getElementById("flyaway ").addEventListener("click", function() {
-                this.classList.add('flownaway');
-                document.getElementById("gettingCountries ").classList.add("spin ");
-            });
-            document.getElementById("flyaway ").addEventListener("click", function() {
-                this.classList.add('flownaway');
-                document.getElementById("gettingSatates").classList.add("spin ");
-            });
-
-            document.getElementById("flyaway ").addEventListener("click", function() {
-                this.classList.add('flownaway');
-                document.getElementById("gettingCities").classList.add("spin ");
-            });
-        </script>
+       
     <script src='cities.js'></script>
 
 
