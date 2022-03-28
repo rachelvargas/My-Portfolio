@@ -1,7 +1,9 @@
 body {
   font-size: 25px;
+  text-aling:center;
   font-family: Verdana, Arial, sans-serif;
-  background-color:light-gray;
+  background-color: rgb(169, 240, 196);
+ 
 }
 
 h1 {
@@ -9,4 +11,8 @@ h1 {
   padding: 1.1em;
   color: white;
   text-align:center;
+}
+ol, il{
+  /*text-aling: center;*/
+  background-color:light-blue;
 }
