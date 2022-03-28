@@ -12,6 +12,12 @@ h1 {
   color: white;
   text-align:center;
 }
+
+h2 {
+  background-color:darkred;
+  color:white;
+  text-align:center;
+  
 li{
   flex-content: center;
   background-color:blue;
