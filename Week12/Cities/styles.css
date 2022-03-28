@@ -47,5 +47,27 @@ body {
     .flyaway:hover {
         background-color: #16187c;
         color: white;
+         
     }
+ #flyaway{
+                transition: all 2s ease-in;
+            }
+            .flownaway{
+                transform:  translateX(3000px);
+            }
+            #innerflyaway{
+                background: #85C1E9;
+                padding: 3px;
+                border-radius: 2px;
+                transition: all 2s;
+            }
+            .spin{
+                transform: rotate(720deg);
+            }
+            .flewaway{
+                background: darkred;
+                padding: 3px;
+                border-radius: 2px;
+                transition: all 2s;
+            }
    
