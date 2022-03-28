@@ -7,6 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>City Information</title>
     <link rel='stylesheet' href='styles.css'>
+    
+    
+</head>
+
+<body>
+    
+
+    <header>
+        <nav class="bg-indigo-600 p-2 mt-0 fixed w-full z-10 top-0"></nav>
+        <div class="flex" id="text">
+            <label for="json">Show JSON</label>
+            <input type="checkbox" id="json">
+        </div>
+        </nav>
+    </header>
+    <main>
+       
+        <h1>City Information</h1>
+        <label for="countries"><strong>Search Countries:</strong> </label>
+        <input type="search" id="countries" class="appearance" placeholder="Search Countries.. ">
+    
+        <div id="flyaway"><button type='submit' id="gettingCountries ">Country Details</button></div><br><br>
+
+
+        <label for="states "><strong>Search States:</strong> </label>
+        <input type="search " id="states " class="appearance " placeholder="Search states.. ">
+        <div id="flyaway"><button type='submit' id="gettingStates ">State Details</button></div><br><br>
+
+        <label for="cities "><strong>Search Cities:</strong> </label>
+        <input type="search " id="cities " class="appearance " placeholder="Search Cities.. ">
+    <div id="flyaway"><button type='submit' id="gettingCities ">City Details</button></div>
+    </main>
      <script>
             document.getElementById("flyaway ").addEventListener("click", function() {
                 this.classList.add('flownaway');
@@ -22,33 +54,6 @@
                 document.getElementById("gettingCities").classList.add("spin ");
             });
         </script>
-    
-</head>
-
-<body>
-
-    <header>
-        <nav class="bg-indigo-600 p-2 mt-0 fixed w-full z-10 top-0"></nav>
-        <div class="flex" id="text">
-            <label for="json">Show JSON</label>
-            <input type="checkbox" id="json">
-        </div>
-        </nav>
-        <br><br>
-        <h1>City Information</h1>
-        <label for="countries"><strong>Search Countries:</strong> </label>
-        <input type="search" id="countries" class="appearance" placeholder="Search Countries.. ">
-    <span>
-        <div id="flyaway"><button type='submit' id="gettingCountries ">Country Details</button></span></div><br><br>
-
-
-        <label for="states "><strong>Search States:</strong> </label>
-        <input type="search " id="states " class="appearance " placeholder="Search states.. ">
-        <div id="flyaway"><button type='submit' id="gettingStates ">State Details</button></div><br><br>
-
-        <label for="cities "><strong>Search Cities:</strong> </label>
-        <input type="search " id="cities " class="appearance " placeholder="Search Cities.. ">
-    <div id="flyaway"><button type='submit' id="gettingCities ">City Details</button></div>
 
 
        
