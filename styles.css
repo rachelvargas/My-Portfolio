@@ -12,7 +12,7 @@ h1 {
   color: white;
   text-align:center;
 }
-ol, il{
-  /*text-aling: center;*/
-  background-color:light-blue;
+li{
+  text-aling: center;
+  background-color:rgb(169, 240, 196);;
 }
