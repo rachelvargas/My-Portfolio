@@ -12,7 +12,7 @@ body {
         size: 20px;
         padding:20;
     }
-.text{
+#text-flex{
         size:15px;
 }
 #json{
