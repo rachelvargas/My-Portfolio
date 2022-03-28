@@ -12,6 +12,12 @@ body {
         size: 20px;
         padding:20:
     }
+.text{
+        size:15px;
+}
+#json{
+        padding:5px;
+}
     
     h1 {
         text-align: center;
@@ -21,10 +27,10 @@ body {
         background-color: rgba(24, 168, 24, 0.479);
     }
     
-    input {
-        width: 150px;
-        height: 70px;
-        size: 25px;
+    .appearance {
+        width: 200px;
+        height: 40px;
+        size: 20px;
         border-radius: 3px;
         box-shadow: #16187c;
     }
@@ -32,7 +38,7 @@ body {
     button {
         background-color: rgb(255, 102, 0);
         color: white;
-        width: 60px;
+        width: 80px;
         height: 40px;
         border-radius: 3px;
         box-shadow: #16187c;
