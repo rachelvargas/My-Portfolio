@@ -20,6 +20,10 @@ h2 {
   
 li{
   flex-content: center;
-  background-color:blue;
+  background-color:darked;
+  width:30px;
   color:white;
 }
+  ol{
+    color:white;
+  }
