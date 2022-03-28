@@ -10,18 +10,20 @@ body {
         margin-top: .5px;
         color: white;
         size: 20px;
+        padding:20:
     }
     
     h1 {
         text-align: center;
         color: white;
-        size: 15px;
+        size: 20px;
+        padding:30px;
         background-color: rgba(24, 168, 24, 0.479);
     }
     
     input {
-        width: 40px;
-        height: 15px;
+        width: 150px;
+        height: 70px;
         size: 25px;
         border-radius: 3px;
         box-shadow: #16187c;
@@ -30,8 +32,8 @@ body {
     button {
         background-color: rgb(255, 102, 0);
         color: white;
-        width: 20px;
-        height: 10px;
+        width: 60px;
+        height: 40px;
         border-radius: 3px;
         box-shadow: #16187c;
     }
