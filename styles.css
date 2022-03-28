@@ -14,7 +14,7 @@ h1 {
 }
 
 h2 {
-  background-color:darkred;
+  /*background-color:darkred;*/
   color:white;
   text-align:center;
   
@@ -24,6 +24,7 @@ li{
   width:30px;
   color:white;
 }
-  ol{
+  a {
     color:white;
+    background-color:darkred;
   }
