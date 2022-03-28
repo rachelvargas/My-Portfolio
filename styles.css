@@ -10,13 +10,13 @@ h1 {
   background-color: blue;
   padding: 1.1em;
   color: white;
-  /*text-align:center;*/
+  text-align:center;
 }
 
 h2 {
   background-color:darkred;
   padding:.2;
-  color:blue;
+  color:white;
   text-align:center;
   
 li{
@@ -26,6 +26,7 @@ li{
   color:white;
 }
   .list{
+    text-ilign:center;
     color:white;
     background-color:darkred;
   }
