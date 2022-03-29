@@ -28,28 +28,28 @@
         <label for="countries"><strong>Search Countries:</strong> </label>
         <input type="search" id="countries" class="appearance" placeholder="Search Countries.. ">
     
-        <div id="flyaway"><button type='submit' id="gettingCountries ">Country Details</button></div><br><br>
+        <div id="flyaway"><button type='submit' id="gettingCountries">Country Details</button></div><br><br>
 
 
         <label for="states "><strong>Search States:</strong> </label>
-        <input type="search " id="states " class="appearance " placeholder="Search states.. ">
-        <div id="flyaway"><button type='submit' id="gettingStates ">State Details</button></div><br><br>
+        <input type="search" id="states" class="appearance" placeholder="Search states.. ">
+        <div id="flyaway"><button type='submit' id="gettingStates">State Details</button></div><br><br>
 
         <label for="cities "><strong>Search Cities:</strong> </label>
-        <input type="search " id="cities " class="appearance " placeholder="Search Cities.. ">
+        <input type="search" id="cities" class="appearance" placeholder="Search Cities.. ">
     <div id="flyaway"><button type='submit' id="gettingCities ">City Details</button></div>
     </main>
      <script>
-            document.getElementById("flyaway ").addEventListener("click", function() {
+            document.getElementById("flyaway").addEventListener("click", function() {
                 this.classList.add('flownaway');
                 document.getElementById("gettingCountries ").classList.add("spin ");
             });
-            document.getElementById("flyaway ").addEventListener("click", function() {
+            document.getElementById("flyaway").addEventListener("click", function() {
                 this.classList.add('flownaway');
                 document.getElementById("gettingSatates").classList.add("spin ");
             });
 
-            document.getElementById("flyaway ").addEventListener("click", function() {
+            document.getElementById("flyaway").addEventListener("click", function() {
                 this.classList.add('flownaway');
                 document.getElementById("gettingCities").classList.add("spin ");
             });
