@@ -20,7 +20,8 @@ document.getElementById("gettingCities").addEventListener("click", getCities);
 function getCountries() {
     let countryList = document.getElementById('CountriesList'); //  where we will put our list of countries
     let countryTitle = document.getElementById('countries'); //  country title entry field
-    let countryURL = `https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries.json`;
+   let countryURL = new Request(`https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries.json`);
+
 
 
     //when any city searched
