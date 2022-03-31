@@ -19,7 +19,7 @@ document.getElementById("gettingCities").addEventListener("click", getCities);
 //  Enter a country title in the search box and press the button
 function getCountries() {
     let countryList = document.getElementById('CountriesList'); //  where we will put our list of countries
-    let countryTitle = document.getElementById('countries'); //  country title entry field
+    //let countryTitle = document.getElementById('countries'); //  country title entry field
    let countryURL = new Request(`https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries.json`);
 
 
