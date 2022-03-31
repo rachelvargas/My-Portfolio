@@ -7,12 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>City Information</title>
     <link rel='stylesheet' href='styles.css'>
-    
-    
 </head>
 
 <body>
-    
 
     <header>
         <nav class="bg-indigo-600 p-2 mt-0 fixed w-full z-10 top-0"></nav>
@@ -22,42 +19,42 @@
         </div>
         </nav>
     </header>
-    <main>
-       
-        <h1>City Information</h1>
-        <label for="countries"><strong>Search Countries:</strong> </label>
-        <input type="search" id="countries" class="appearance" placeholder="Search Countries.. ">
-    
-        <div id="flyaway"><button type='submit' id="gettingCountries">Country Details</button></div><br><br>
+    <br><br>
+    <h1>City Information</h1>
+    <label for="countries"><strong>Search Countries:</strong> </label>
+    <input type="search" id="countries" class="appearance" placeholder="Search Countries..">
+    <div id="flyaway_1"><button type='submit' id="gettingCountries">Country Details</button></div>
+    <div id="countriesList"></div>
+    <br><br>
 
+    <label for="states"><strong>Search States:</strong> 
+    </label> <input type="search" id="states" class="appearance" placeholder="Search states.. ">
+    <div id="flyaway_2"><button type='submit' id="gettingStates">State Details</button></div>
+    <div id="statesList"></div>
+    <br><br>
 
-        <label for="states"><strong>Search States:</strong> </label>
-        <input type="search" id="states" class="appearance" placeholder="Search states.. ">
-        <div id="flyaway"><button type='submit' id="gettingStates">State Details</button></div><br><br>
+    <label for="cities"><strong>Search Cities:</strong> </label>
+    <input type="search" id="cities" class="appearance" placeholder="Search Cities.. ">
+    <div id="flyaway_3"><button type='submit' id="gettingCities">City Details</button></div>
+    <div id="citiesList"></div>
 
-        <label for="cities "><strong>Search Cities:</strong> </label>
-        <input type="search" id="cities" class="appearance" placeholder="Search Cities.. ">
-    <div id="flyaway"><button type='submit' id="gettingCities">City Details</button></div>
-    </main>
-     <script>
-            document.getElementById("flyaway").addEventListener("click", function() {
-                this.classList.add('flownaway');
-                document.getElementById("gettingCountries").classList.add("spin");
-            });
-            document.getElementById("flyaway").addEventListener("click", function() {
-                this.classList.add('flownaway');
-                document.getElementById("gettingSatates").classList.add("spin");
-            });
+    <script>
+        document.getElementById("flyaway_1").addEventListener("click", function() {
+            this.classList.add('flownaway_1');
+            document.getElementById("gettingCountries").classList.add("spin");
+        });
+        document.getElementById("flyaway_2").addEventListener("click", function() {
+            this.classList.add('flownaway_2');
+            document.getElementById("gettingStates").classList.add("spin");
+        });
 
-            document.getElementById("flyaway").addEventListener("click", function() {
-                this.classList.add('flownaway');
-                document.getElementById("gettingCities").classList.add("spin");
-            });
-        </script>
+        document.getElementById("flyaway_3").addEventListener("click", function() {
+            this.classList.add('flownaway_3');
+            document.getElementById("gettingCities").classList.add("spin");
+        });
+    </script>
 
-
-       
-    <script src='city.js'></script>
+    <script src='cities.js '></script>
 
 
 </body>
