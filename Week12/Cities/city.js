@@ -3,24 +3,22 @@
 //const citiesURL = 'https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/cities.json';
 
 
-//getting the reference for any time it is used here
-let json = document.getElementById('json');
 
 
-document.getElementById("gettingCountries").addEventListener("click", getCountries);
+document.getElementById("getCountries").addEventListener("click", getCountries);
 
 
-document.getElementById("gettingStates").addEventListener("click", getStates);
+//document.getElementById("gettingStates").addEventListener("click", getStates);
 
 
-document.getElementById("gettingCities").addEventListener("click", getCities);
+//document.getElementById("gettingCities").addEventListener("click", getCities);
 
 
 //  Enter a country title in the search box and press the button
 function getCountries() {
-    let countryList = document.getElementById('CountriesList'); //  where we will put our list of countries
-    //let countryTitle = document.getElementById('countries'); //  country title entry field
-   let countryURL = new Request(`https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries.json`);
+    let countryList = document.getElementById('countryList'); //  where we will put our list of countries
+    let countryTitle = document.getElementById('country'); //  country title entry field
+    let countryURL = `https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries.json`;
 
 
 
@@ -37,10 +35,10 @@ function getCountries() {
     fetch(countryURL)
         .then(response => response.json())
         .then(countries => {
-            if (json.checked) {
+            /*if (json.checked) {
                 document.body.innerText = JSON.stringify(countries); //  if the box is clicked only show the JSON result
                 return;
-            }
+            }*/
 
             //innerHTML variable stracts data from JSON object and show it to the user
             let innerHTML = "<div class='grid-container'>";
@@ -67,7 +65,7 @@ function getCountries() {
 
 //  The user can get more movie details by clicking on the movie poster to get to this code
 function countryDetails() {
-    let countryList = document.getElementById('countriesList'); //  this is where we will put our movie details
+    let countryList = document.getElementById('countryList'); //  this is where we will put our movie details
 
     //  the id of the image is the IMDB ID we want details on
     let countryURL = `https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries.json${this.name}`; //  search for movies with this name. this.id??
@@ -103,7 +101,7 @@ function countryDetails() {
 
 
 //  Enter a state name in the search box and press the button
-function getStates() {
+/*function getStates() {
     let stateList = document.getElementById('statesList');
     let stateTitle = document.getElementById('states'); //   states title entry field
     let stateURL = `https: //raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/states.json`;
@@ -267,4 +265,4 @@ function cityDetails() {
 
 
         });
-}
+}*/
