@@ -4,264 +4,233 @@
 
 
 
-
 document.getElementById("getCountries").addEventListener("click", getCountries);
+document.getElementById("getStates").addEventListener("click", getStates);
+document.getElementById("getCities").addEventListener("click", getCities);
 
+//GETTING COUNTRIES
 
-//document.getElementById("gettingStates").addEventListener("click", getStates);
+let allCountries;
 
-
-//document.getElementById("gettingCities").addEventListener("click", getCities);
-
+//  Calling the json data. (making the request)
+fetch("https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries.json")
+    .then(response => response.json())
+    .then(countries => {
+        allCountries = countries;
+    });
 
 //  Enter a country title in the search box and press the button
 function getCountries() {
     let countryList = document.getElementById('countryList'); //  where we will put our list of countries
     let countryTitle = document.getElementById('country'); //  country title entry field
-    let countryURL = require("https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries.json");
-    console.log(countryURL);
 
     //when any city searched
     if (countryTitle.length == 0) {
-        countryList.innerText = "Please enter a Country to search for"
+        countryList.innerText = "Please enter a Country to search for";
         return;
     }
 
-    //  add counry to the search API
-    countryURL += countryTitle.value;
+    //let country = allCountries.filter(c => c.name === countryTitle.value);
+    //innerHTML variable stracts data from JSON object and show it to the user
+    let innerHTML = "";
 
-    //  making the request
-    fetch(countryURL)
-        .then(response => response.json())
-        .then(countries => {
-            /*if (json.checked) {
-                document.body.innerText = JSON.stringify(countries); //  if the box is clicked only show the JSON result
-                return;
-            }*/
+    for (let country of allCountries) {
+        //building a card for each country
+        innerHTML += `
+            <div class="grid-item" id="${country.name}">
+                <h4> ${country.name} </h4>
+                <span class="inline-block bg-gray-200 rounded-full px3 text-sm font-bold text-gray-500" >${country.iso2}</span>
+            </div>`
+    }
+    innerHTML += "<div class='grid-container'>" + innerHTML + "</div>";
 
-            //innerHTML variable stracts data from JSON object and show it to the user
-            let innerHTML = "<div class='grid-container'>";
-
-
-            for (let country of countries.results) {
-                //building a card for each country
-
-                innerHTML +=
-                    `<div class="grid-item"><h4> ${country.name} </h4><span class="inline-block bg-gray-200 rounded-full px3 text-sm font-bold text-gray-500 >${country.iso2}</span></div>`
-            }
-            innerHTML += "</div>";
-
-            //taking the finished HTML and stuff it into the web page
-            countryList.innerHTML = innerHTML
+    //taking the finished HTML and stuff it into the web page
+    countryList.innerHTML = innerHTML
 
 
-            for (let country of countries.results) {
-                //  NOW we can add a click event listener for the image which will show us the movie details
-                document.getElementById(country.name).addEventListener('click', countryDetails) //country.id??
-            }
-        });
-}
+    for (let country of allCountries) {
+        //  NOW we can add a click event listener which will show us the country details
+        document.getElementById(country.name).addEventListener('click', countryDetails) //country.id??
+    }
 
-//  The user can get more movie details by clicking on the movie poster to get to this code
-function countryDetails() {
-    let countryList = document.getElementById('countryList'); //  this is where we will put our movie details
+};
 
-    //  the id of the image is the IMDB ID we want details on
-    let countryURL = `https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries.json${this.name}`; //  search for movies with this name. this.id??
+//  The user can get more movie details by clicking on the country name to get to this code
+function countryDetails(event) {
+    let countryList = document.getElementById('countriesList'); //  this is where we will put our movie details
 
-    //  using the country details API get additional data about the country
-    fetch(countryURL)
-        .then(response => response.json())
-        .then(country => {
-            if (json.checked) {
-                document.body.innerText = JSON.stringify(country); //  if the box is clicked only show the JSON result
-                return;
-            }
+    let countryName = event.currentTarget.id;
+    console.log(countryName)
 
-            //innerHTML variable stracts data from JSON object and show it to the user
-            let innerHTML = "<div class='grid-container'>";
+    let country = allCountries.filter(c => c.name === countryName)[0];
 
-            //data with this API. 
-            innerHTML +=
-                `<div class ="grid-item">
-        <h4><strong> Country Name:</strong> ${country.name}</h4>
+
+    //innerHTML variable stracts data from JSON object and show it to the user
+    let innerHTML = "<div class='grid-container'>";
+
+    //data with this API. 
+    innerHTML +=
+        `<div class ="grid-item">
+        <h2><strong> Country Name:</strong> ${country.name}</h2>
     <h3><strong>Capital:</strong> ${country.capital}</h3> 
     <h3> <strong>Acronym:</strong> ${country.iso3} </h3> 
     <h3> <strong>Navite:</strong> ${country.native}</h3>
     <h3><strong>Region:</strong> ${country.region}</h3>
 
     <ul>`;
-            innerHTML += "</ul></div></div>";
-            countryList.innerHTML = innerHTML
+    innerHTML += "</div></div>";
+    countryList.innerHTML = innerHTML
 
-
-        });
 }
 
+//GETTING STATES
 
-//  Enter a state name in the search box and press the button
-/*function getStates() {
-    let stateList = document.getElementById('statesList');
-    let stateTitle = document.getElementById('states'); //   states title entry field
-    let stateURL = `https: //raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/states.json`;
+let allStates;
 
-    ///when any city searched
+//calling the json data.(making the request)
+fetch("https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/states.json")
+    .then(response => response.json())
+    .then(states => {
+        allStates = states;
+    });
+
+//  Enter a country title in the search box and press the button
+function getStates() {
+    let stateList = document.getElementById('stateList'); //  where we will put our list of states
+    let stateTitle = document.getElementById('state'); //  state title entry field
+
+    //when any city searched
     if (stateTitle.length == 0) {
-        stateList.innerText = "Please enter a State to search for"
+        stateList.innerText = "Please enter a State to search for";
         return;
     }
 
-    //adding state to the search API
-    stateURL += stateTitle.value;
+    //let country = allCountries.filter(c => c.name === countryTitle.value);
+    //innerHTML variable stracts data from JSON object and show it to the user
+    let innerHTML = "";
 
-    //  make the request
-    fetch(stateURL)
-        .then(response => response.json())
-        .then(states => {
-            if (json.checked) {
-                document.body.innerText = JSON.stringify(states); //  if the box is clicked only show the JSON result
-                return;
-            }
-
-            //stract data from JSON object and show it to the user
-            let innerHTML = "<div class='grid-container'>";
+    for (let state of allStates) {
+        //building a card for each country
+        innerHTML += `
+            <div class="grid-item" id="${state.name}">
+            <h4> State Name: ${state.name}</h4><h4>Country: ${state.country_name}</h3></div>`
 
 
-            for (let state of states.results) {
-                //a card for each movie
-                innerHTML +=
-                    `<div class ="grid-item"><h4> State Name: ${state.name}</h4><h4>Country: ${state.country_name}</h3></div>`
+    }
+    innerHTML += "<div class='grid-container'>" + innerHTML + "</div>";
 
-            }
-            innerHTML += "</div>";
-
-            //the finished HTML and stuff it into the web page
-            stateList.innerHTML = innerHTML
+    //taking the finished HTML and stuff it into the web page
+    stateList.innerHTML = innerHTML
 
 
-            //creates the individual elements for each state
-            for (let state of states.results) {
-                //  NOW we can add a click event listener for the image which will show us the movie details
-                document.getElementById(state.name).addEventListener('click', stateDetails) //state.id??
-            }
-        });
-}
+    for (let state of allStates) {
+        //  NOW we can add a click event listener for the image which will show us the movie details
+        document.getElementById(state.name).addEventListener('click', stateDetails) //country.id??
+    }
+
+};
+
+//  The user can get more movie details by clicking on the movie poster to get to this code
+function stateDetails(event) {
+    let statesList = document.getElementById('statesList'); //  this is where we will put our state details
+
+    let stateName = event.currentTarget.id;
+    console.log(stateName)
+
+    let state = allStates.filter(s => s.name === stateName)[0];
 
 
-function stateDetails() {
-    let stateList = document.getElementById('stateList'); //  this is where we will put our state details
+    //innerHTML variable stracts data from JSON object and show it to the user
+    let innerHTML = "<div class='grid-container'>";
 
-    let stateURL = `https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/states.json`;
-
-    // getting additional data about the state
-    fetch(stateURL)
-        .then(response => response.json())
-        .then(state => {
-            if (json.checked) {
-                document.body.innerText = JSON.stringify(state); //  if the box is clicked only show the JSON result
-                return;
-            }
-
-            //stract data from JSON object and show it to the user
-            let innerHTML = "<div class='grid-container'>";
-
-            //some data with this API. 
-            innerHTML +=
+    //data with this API. 
+     innerHTML +=
                 `<div class ="grid-item">
-        <h4> <strong>State Name: </strong>${state.name}</h4>
+        <h2> <strong>State Name: </strong>${state.name}</h2>
     <h3><strong>Country Name:</strong> ${state.country_name}</h3> 
     <h3> <strong>Type:</strong> ${state.code} </h3> 
     <h3> <strong>Country Code: </strong>${state.country_code}</h3>
     <h3><strong>State Code:</strong> ${state.state_code}</h3>
 
     <ul>`;
-            innerHTML += "</ul></div></div>";
-            countryList.innerHTML = innerHTML
+    innerHTML += "</div></div>";
+    statesList.innerHTML = innerHTML
 
-
-        });
 }
 
+//GETTING THE CITIES
 
-//  Enter a state name in the search box and press the button
+let allCities;
+
+//  making the request
+fetch("https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/cities.json")
+    .then(response => response.json())
+    .then(countries => {
+        allCountries = countries;
+    });
+
+//  Enter a country title in the search box and press the button
 function getCities() {
-    let cityList = document.getElementById('citiesList');
-    let cityTitle = document.getElementById('cities'); //   cities title entry field
-    let cityURL = `https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/cities.json`;
+    let cityList = document.getElementById('cityList'); //  where we will put our list of countries
+    let cityTitle = document.getElementById('city'); //  country title entry field
 
-    ///when any city searched
+    //when any city searched
     if (cityTitle.length == 0) {
-        cityList.innerText = "Please enter a City to search for"
+        cityList.innerText = "Please enter a City to search for";
         return;
     }
 
-    //adding city to the search API
-    cityURL += cityTitle.value;
+    //let city = allCities.filter(c => c.name === cityTitle.value);
+    //innerHTML variable stracts data from JSON object and show it to the user
+    let innerHTML = "";
 
-    //  make the request
-    fetch(cityURL)
-        .then(response => response.json())
-        .then(cities => {
-            if (json.checked) {
-                document.body.innerText = JSON.stringify(cities); //  if the box is clicked only show the JSON result
-                return;
-            }
+    for (let city of allCities) {
+        //building a card for each country
 
-            //stract data from JSON object and show it to the user
-            let innerHTML = "<div class='grid-container'>";
+        innerHTML +=
+            `<div class = "grid-item" id="${city.name}">
+            <h4>City Name: ${city.name}</h4><h4>Country: ${city.state_name}</h3>
+            </div>`
 
+    }
 
-            for (let city of cities.results) {
-                //a card for each movie
-                innerHTML +=
-                    ` <div class = "grid-item" > <h4> City Name: ${city.name} </h4><h4>Country: ${city.state_name}</h3> </div>`
+    innerHTML += "<div class='grid-container'>" + innerHTML + "</div>";
 
-            }
-            innerHTML += "</div>";
-
-            //the finished HTML and stuff it into the web page
-            stateList.innerHTML = innerHTML
+    //taking the finished HTML and stuff it into the web page
+    cityList.innerHTML = innerHTML
 
 
-            //creates the individual elements for each state
-            for (let city of cities.results) {
-                //  NOW we can add a click event listener for the image which will show us the movie details
-                document.getElementById(city.name).addEventListener('click', cityDetails) //state.id??
-            }
-        });
+    for (let city of allCities) {
+        //  NOW we can add a click event listener which will show us the city details
+        document.getElementById(city.name).addEventListener('click', cityDetails) //city.id??
+    }
+
+};
+
+//  The user can get more movie details by clicking on the city name to get to this code
+function cityDetails(event) {
+    let citiesList = document.getElementById('citiessList'); //  this is where we will put our movie details
+
+    let cityName = event.currentTarget.id;
+    console.log(cityName)
+
+    let city = allCities.filter(c => c.name === cityName)[0];
+
+
+    //innerHTML variable stracts data from JSON object and show it to the user
+    let innerHTML = "<div class='grid-container'>";
+
+    //data with this API. 
+    innerHTML +=
+        `<div class ="grid-item">
+<h2><strong> City Name:</strong> ${city.name}</h2>
+<h3><strong>Country Name:</strong> ${city.country_name}</h3> 
+<h3> <strng>State Name: </strong>${city.state_name} </h3> 
+<h3> <strong>Country Code:</strong> ${state.country_code}</h3>
+<h3> <strong>State Code:</strong> ${city.state_code}</h3>
+
+<ul>`;
+    innerHTML += "</div></div>";
+    citiesList.innerHTML = innerHTML
+
 }
-
-
-function cityDetails() {
-    let cityList = document.getElementById('citiesList'); //  this is where we will put our city details
-
-    let cityURL = `https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/states.json`;
-
-    // getting additional data about the state
-    fetch(cityURL)
-        .then(response => response.json())
-        .then(cities => {
-            if (json.checked) {
-                document.body.innerText = JSON.stringify(cities); //  if the box is clicked only show the JSON result
-                return;
-            }
-
-            //stract data from JSON object and show it to the user
-            let innerHTML = "<div class='grid-container'>";
-
-            //some data with this API. 
-            innerHTML +=
-                `<div class ="grid-item">
-        <h4><strong> City Name:</strong> ${city.name}</h4>
-    <h3><strong>Country Name:</strong> ${city.country_name}</h3> 
-    <h3> <strng>State Name: </strong>${city.state_name} </h3> 
-    <h3> <strong>Country Code:</strong> ${state.country_code}</h3>
-    <h3> <strong>State Code:</strong> ${city.state_code}</h3>
-
-    <ul>`;
-            innerHTML += "</ul></div></div>";
-            countryList.innerHTML = innerHTML
-
-
-        });
-}*/
