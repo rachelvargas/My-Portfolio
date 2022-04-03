@@ -28,7 +28,7 @@ body {
     }
     
     .appearance {
-        width: 200px;
+        width: 160px;
         height: 40px;
         size: 20px;
         border-radius: 3px;
@@ -49,28 +49,36 @@ body {
         color: white;
          
     }
- #flyaway{
-                transition: all 2s ease-in;
-            }
-            .flownaway{
-                transform:  translateX(3000px);
-            }
-            #innerflyaway{
-                background: #85C1E9;
-                padding: 3px;
-                border-radius: 2px;
-                transition: all 2s;
-            }
-            .spin{
-                transform: rotate(720deg);
-            }
-            .flewaway{
-                background: darkred;
-                padding: 3px;
-                border-radius: 2px;
-                transition: all 2s;
-            }
-   .grid-container {
+ #flyaway {
+        transition: all 2s ease-in;
+    }
+    .flownaway{
+        transform:  translateX(3000px);
+    }
+    #innerflyaway{
+        background: #85C1E9;
+        padding: 3px;
+        border-radius: 2px;
+        transition: all 2s;
+    }
+    .spin{
+        transform: rotate(720deg);
+    }
+    .flewaway{
+        background: darkred;
+        padding: 3px;
+        border-radius: 2px;
+        transition: all 2s;
+    }
+
+header {
+    align-content: center;
+    background-color: #df7cd7;
+}
+   .grid-container {header {
+    align-content: center;
+    background-color: #df7cd7;
+}
     display: grid;
     grid-template-columns: auto auto auto auto;
     background-color: #2196F3;
