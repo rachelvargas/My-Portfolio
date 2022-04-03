@@ -38,7 +38,7 @@ function getCountries() {
         //building a card for each country
         innerHTML += `
             <div class="grid-item" id="${country.name}">
-                <h4> ${country.name} </h4>
+                <h4>${country.name}</h4>
                 <span class="inline-block bg-gray-200 rounded-full px3 text-sm font-bold text-gray-500" >${country.iso2}</span>
             </div>`
     }
@@ -57,7 +57,7 @@ function getCountries() {
 
 //  The user can get more movie details by clicking on the country name to get to this code
 function countryDetails(event) {
-    let countryList = document.getElementById('countriesList'); //  this is where we will put our movie details
+    let countriesList = document.getElementById('countriesList'); //  this is where we will put our movie details
 
     let countryName = event.currentTarget.id;
     console.log(countryName)
@@ -69,17 +69,19 @@ function countryDetails(event) {
     let innerHTML = "<div class='grid-container'>";
 
     //data with this API. 
-    innerHTML +=
-        `<div class ="grid-item">
-        <h2><strong> Country Name:</strong> ${country.name}</h2>
+    innerHTML += `
+    
+    <div class ="grid-item">
+    <h2><strong>Country Name:</strong> ${country.name}</h2>
     <h3><strong>Capital:</strong> ${country.capital}</h3> 
-    <h3> <strong>Acronym:</strong> ${country.iso3} </h3> 
-    <h3> <strong>Navite:</strong> ${country.native}</h3>
+    <h3><strong>Acronym:</strong> ${country.iso3}</h3> 
+    <h3><strong>Navite:</strong> ${country.native}</h3>
     <h3><strong>Region:</strong> ${country.region}</h3>
 
     <ul>`;
+    
     innerHTML += "</div></div>";
-    countryList.innerHTML = innerHTML
+    countriesList.innerHTML = innerHTML
 
 }
 
@@ -112,9 +114,11 @@ function getStates() {
     for (let state of allStates) {
         //building a card for each country
         innerHTML += `
+        
             <div class="grid-item" id="${state.name}">
-            <h4> State Name: ${state.name}</h4><h4>Country: ${state.country_name}</h3></div>`
-
+            <h3>State Name: ${state.name}</h3><h4>Country: ${state.country_name}</h4>
+            
+            </div>`
 
     }
     innerHTML += "<div class='grid-container'>" + innerHTML + "</div>";
@@ -122,10 +126,9 @@ function getStates() {
     //taking the finished HTML and stuff it into the web page
     stateList.innerHTML = innerHTML
 
-
     for (let state of allStates) {
         //  NOW we can add a click event listener for the image which will show us the movie details
-        document.getElementById(state.name).addEventListener('click', stateDetails) //country.id??
+        document.getElementById(state.name).addEventListener('click', stateDetails) //state.id??
     }
 
 };
@@ -144,15 +147,17 @@ function stateDetails(event) {
     let innerHTML = "<div class='grid-container'>";
 
     //data with this API. 
-     innerHTML +=
-                `<div class ="grid-item">
-        <h2> <strong>State Name: </strong>${state.name}</h2>
+     innerHTML += `
+     
+     <div class ="grid-item">
+        <h2><strong>State Name:</strong> ${state.name}</h2>
     <h3><strong>Country Name:</strong> ${state.country_name}</h3> 
-    <h3> <strong>Type:</strong> ${state.code} </h3> 
-    <h3> <strong>Country Code: </strong>${state.country_code}</h3>
+    <h3><strong>Type:</strong> ${state.code}</h3> 
+    <h3><strong>Country Code:</strong> ${state.country_code}</h3>
     <h3><strong>State Code:</strong> ${state.state_code}</h3>
 
     <ul>`;
+    
     innerHTML += "</div></div>";
     statesList.innerHTML = innerHTML
 
@@ -162,11 +167,11 @@ function stateDetails(event) {
 
 let allCities;
 
-//  making the request
+// Calling the json data.( "making the request")
 fetch("https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/cities.json")
     .then(response => response.json())
-    .then(countries => {
-        allCountries = countries;
+    .then(cities => {
+        allCities = cities;
     });
 
 //  Enter a country title in the search box and press the button
@@ -187,10 +192,11 @@ function getCities() {
     for (let city of allCities) {
         //building a card for each country
 
-        innerHTML +=
-            `<div class = "grid-item" id="${city.name}">
-            <h4>City Name: ${city.name}</h4><h4>Country: ${city.state_name}</h3>
-            </div>`
+        innerHTML += `
+        <div class = "grid-item" id="${city.name}">
+            <h3>City Name: ${city.name}</h3><h4>Country: ${city.state_name}</h4>
+            
+         </div>`
 
     }
 
@@ -209,7 +215,7 @@ function getCities() {
 
 //  The user can get more movie details by clicking on the city name to get to this code
 function cityDetails(event) {
-    let citiesList = document.getElementById('citiessList'); //  this is where we will put our movie details
+    let citiesList = document.getElementById('citiesList'); //  this is where we will put our movie details
 
     let cityName = event.currentTarget.id;
     console.log(cityName)
@@ -221,15 +227,17 @@ function cityDetails(event) {
     let innerHTML = "<div class='grid-container'>";
 
     //data with this API. 
-    innerHTML +=
-        `<div class ="grid-item">
-<h2><strong> City Name:</strong> ${city.name}</h2>
-<h3><strong>Country Name:</strong> ${city.country_name}</h3> 
-<h3> <strng>State Name: </strong>${city.state_name} </h3> 
-<h3> <strong>Country Code:</strong> ${state.country_code}</h3>
-<h3> <strong>State Code:</strong> ${city.state_code}</h3>
+    innerHTML += `
+    
+    <div class ="grid-item">
+    <h2><strong> City Name:</strong> ${city.name}</h2>
+    <h3><strong>Country Name:</strong> ${city.country_name}</h3> 
+    <h3> <strng>State Name: </strong>${city.state_name} </h3> 
+    <h3> <strong>Country Code:</strong> ${city.country_code}</h3>
+    <h3> <strong>State Code:</strong> ${city.state_code}</h3>
 
-<ul>`;
+    <ul>`;
+    
     innerHTML += "</div></div>";
     citiesList.innerHTML = innerHTML
 
