@@ -28,8 +28,8 @@ body {
     }
     
     .appearance {
-        width: 100px;
-        height: 30px;
+        width: 200px;
+        height: 40px;
         size: 20px;
         border-radius: 3px;
         box-shadow: #16187c;
@@ -38,7 +38,7 @@ body {
     button {
         background-color: rgb(255, 102, 0);
         color: white;
-        width: 80px;
+        width: 90px;
         height: 40px;
         border-radius: 3px;
         box-shadow: #16187c;
