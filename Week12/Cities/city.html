@@ -13,46 +13,56 @@
 
     <header>
         <h1>City Information</h1>
-    <label for="countries"><strong>Search Countries:</strong> </label>
-    <input type="search" id="country" class="appearance" placeholder="Search Countries..">
-    <div id="flyaway_1"><button type='submit' id="getCountries">Get Country</button></div>
-    
-    <br><br>
+        <label for="countries"><strong>Search Countries:</strong> </label>
+        <input type="search" id="country" class="appearance" placeholder="Search Countries.." value="Cuba">
+        <div id="flyaway_1">
+            <button type='submit' id="getCountries">Get Country</button>
+        </div>
+        <br><br>
+        <div id="countriesList"></div>
 
-    <!--<label for="states"><strong>Search States:</strong> 
-    </label> <input type="search" id="states" class="appearance" placeholder="Search states.. ">
-    <div id="flyaway_2"><button type='submit' id="gettingStates">State Details</button></div>
-    <div id="statesList"></div>
-    <br><br>
 
-    <label for="cities"><strong>Search Cities:</strong> </label>
-    <input type="search" id="cities" class="appearance" placeholder="Search Cities.. ">
-    <div id="flyaway_3"><button type='submit' id="gettingCities">City Details</button></div>
-    <div id="citiesList"></div>-->
+        <label for="states"><strong>Search States:</strong> 
+    </label> <input type="search" id="state" class="appearance" placeholder="Search states.. ">
+        <div id="flyaway_2"><button type='submit' id="getgStates">Get State</button>
+        </div>
+        <br><br>
+        <div id="statesList"></div>
 
-       
+
+        <label for="cities"><strong>Search Cities:</strong> </label>
+        <input type="search" id="city" class="appearance" placeholder="Search Cities.. ">
+        <div id="flyaway_3"><button type='submit' id="getCities">Get City</button>
+        </div>
+        <br><br>
+        <div id="citiesList"></div>
     </header>
-    <br><br>
+
     <main>
-    <div id="countrysList"></div></main>
-    
+        <div id="countryList"></div>
+        <div id="stateList"></div>
+        <div id="cityList"></div>
+
+
+    </main>
+
     <script>
         document.getElementById("flyaway_1").addEventListener("click", function() {
             this.classList.add('flownaway_1');
             document.getElementById("getCountries").classList.add("spin");
         });
-        /*document.getElementById("flyaway_2").addEventListener("click", function() {
+        document.getElementById("flyaway_2").addEventListener("click", function() {
             this.classList.add('flownaway_2');
-            document.getElementById("gettingStates").classList.add("spin");
+            document.getElementById("getStates").classList.add("spin");
         });
 
         document.getElementById("flyaway_3").addEventListener("click", function() {
             this.classList.add('flownaway_3');
-            document.getElementById("gettingCities").classList.add("spin");
-        });*/
+            document.getElementById("getCities").classList.add("spin");
+        });
     </script>
 
-    <script src='city.js '></script>
+    <script src='city.js'></script>
 
 
 </body>
