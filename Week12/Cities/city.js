@@ -229,10 +229,10 @@ function cityDetails(event) {
     //data with this API. 
     innerHTML += `
     
-    <div class ="grid-item">
+    <div class="grid-item">
     <h2><strong> City Name:</strong> ${city.name}</h2>
     <h3><strong>Country Name:</strong> ${city.country_name}</h3> 
-    <h3> <strng>State Name: </strong>${city.state_name} </h3> 
+    <h3> <strng>State Name: </strong>${city.state_name}</h3> 
     <h3> <strong>Country Code:</strong> ${city.country_code}</h3>
     <h3> <strong>State Code:</strong> ${city.state_code}</h3>
 
