@@ -192,7 +192,7 @@ function getCities() {
 
         innerHTML += `
         
-        div class = "grid-item" id="${city.name}">        
+        <div class="grid-item" id="${city.name}">        
         <h3>City Name: ${city.name}</h3>
         <h4>Country: ${city.state_name}</h4>
         
