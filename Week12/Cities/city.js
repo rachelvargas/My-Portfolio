@@ -38,7 +38,8 @@ function getCountries() {
         //building a card for each country
         innerHTML += `
             <div class="grid-item" id="${country.name}">
-                <h4>${country.name}</h4>
+            <h2>Click on any country name to show its information above</h2>
+                <h3>${country.name}</h3>
                 <span class="inline-block bg-gray-200 rounded-full px3 text-sm font-bold text-gray-500" >${country.iso2}</span>
             </div>`
     }
@@ -115,7 +116,9 @@ function getStates() {
         innerHTML += `
         
             <div class="grid-item" id="${state.name}">
-            <h3>State Name: ${state.name}</h3><h4>Country: ${state.country_name}</h4>
+            <h2>Click on any state name to show its information above</h2>
+            <h3>State Name: ${state.name}</h3>
+            <h4>Country: ${state.country_name}</h4>
             
             </div>`
 
@@ -149,6 +152,7 @@ function stateDetails(event) {
      innerHTML += `
      
      <div class ="grid-item">
+     
         <h2><strong>State Name:</strong> ${state.name}</h2>
     <h3><strong>Country Name:</strong> ${state.country_name}</h3> 
     <h3><strong>Type:</strong> ${state.code}</h3> 
@@ -192,7 +196,8 @@ function getCities() {
 
         innerHTML += `
         
-        <div class="grid-item" id="${city.name}">        
+        <div class="grid-item" id="${city.name}">  
+        <h2>Click on any city name to show its information above</h2>
         <h3>City Name: ${city.name}</h3>
         <h4>Country: ${city.state_name}</h4>
         
