@@ -74,11 +74,16 @@ body {
     header {
     align-content: center;
     background-color:  #ecde19;
+            
 }
 
 article{
         align-content:right;
         margin:right;
+        width:120px;
+        height:160px;
+        background-color:rgb(255, 102, 0);
+        color:white;
 }
 
    .grid-container {header {
