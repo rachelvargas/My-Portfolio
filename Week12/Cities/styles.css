@@ -77,15 +77,15 @@ body {
             
 }
 
-article{
-        /*align-content:right;*/
+/*article{
+        /*align-content:right;
         margin-right: -200px;
         margin-top:10px;
         width:180px;
         height:100px;
         background-color:rgb(255, 102, 0);
         color:white;
-}
+}*/
 
    .grid-container {header {
     align-content: center;
