@@ -71,7 +71,7 @@ h2{
     .spin{
         transform: rotate(720deg);
     }
-    .flewaway{
+    .flayaway{
         background: darkred;
         padding: 3px;
         border-radius: 2px;
