@@ -76,6 +76,11 @@ body {
     background-color:  #ecde19;
 }
 
+article{
+        align-content:right;
+        margin:right;
+}
+
    .grid-container {header {
     align-content: center;
     background-color: #df7cd7;
