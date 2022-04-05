@@ -37,11 +37,13 @@ function getCountries() {
     for (let country of allCountries) {
         //building a card for each country
         innerHTML += `
-            <div class="grid-item" id="${country.name}">
-            <h2>Click on any country name to show its information above</h2>
-                <h3>${country.name}</h3>
-                <span class="inline-block bg-gray-200 rounded-full px3 text-sm font-bold text-gray-500" >${country.iso2}</span>
-            </div>`
+        
+        <h2>Click on any country name to show its information above</h2>
+        <div class="grid-item" id="${country.name}">
+         <h3>${country.name}</h3>
+         <span class="inline-block bg-gray-200 rounded-full px3 text-sm font-bold text-gray-500" >${country.iso2}</span>
+            
+        </div>`
     }
     innerHTML += "<div class='grid-container'>" + innerHTML + "</div>";
 
@@ -71,7 +73,7 @@ function countryDetails(event) {
 
     //data with this API. 
     innerHTML += `
-    
+     
     <div class ="grid-item">
     <h2><strong>Country Name:</strong> ${country.name}</h2>
     <h3><strong>Capital:</strong> ${country.capital}</h3> 
@@ -115,9 +117,9 @@ function getStates() {
         //building a card for each country
         innerHTML += `
         
-            <div class="grid-item" id="${state.name}">
-            <h2>Click on any state name to show its information above</h2>
-            <h3>State Name: ${state.name}</h3>
+        <h2>Click on any state name to show its information above</h2>
+        <div class="grid-item" id="${state.name}">
+        <h3>State Name: ${state.name}</h3>
             <h4>Country: ${state.country_name}</h4>
             
             </div>`
@@ -196,8 +198,8 @@ function getCities() {
 
         innerHTML += `
         
-        <div class="grid-item" id="${city.name}">  
-        <h2>Click on any city name to show its information above</h2>
+        <h2>Click on any city name to show its information above</h2>        
+        <div class="grid-item" id="${city.name}">        
         <h3>City Name: ${city.name}</h3>
         <h4>Country: ${city.state_name}</h4>
         
