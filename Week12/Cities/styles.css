@@ -26,6 +26,11 @@ body {
         padding:25px;
         background-color: rgba(24, 168, 24, 0.479);
     }
+h2{
+        background-color: black;
+        color:white;
+}
+        
     
     .appearance {
         width: 160px;
