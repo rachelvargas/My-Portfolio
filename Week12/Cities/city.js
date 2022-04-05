@@ -192,10 +192,11 @@ function getCities() {
 
         innerHTML += `
         
-        <div class = "grid-item" id="${city.name}">        
-        <h3>City Name: ${city.name}</h3><h4>Country: ${city.state_name}</h4>
-            
-         </div>`
+        div class = "grid-item" id="${city.name}">        
+        <h3>City Name: ${city.name}</h3>
+        <h4>Country: ${city.state_name}</h4>
+        
+        </div>`
 
     }
 
@@ -229,11 +230,11 @@ function cityDetails(event) {
     innerHTML += `
     
     <div class="grid-item">
-    <h2><strong> City Name: </strong> ${city.name}</h2>
-    <h3><strong>Country Name: </strong> ${city.country_name}</h3> 
-    <h3><strong>State Name: </strong>${city.state_name}</h3> 
-    <h3><strong>Country Code: </strong> ${city.country_code}</h3>
-    <h3><strong>State Code: </strong> ${city.state_code}</h3>
+    <h2><strong> City Name:</strong> ${city.name}</h2>
+    <h3><strong>Country Name:</strong> ${city.country_name}</h3> 
+    <h3><strong>State Name:</strong>${city.state_name}</h3> 
+    <h3><strong>Country Code:</strong> ${city.country_code}</h3>
+    <h3><strong>State Code:</strong> ${city.state_code}</h3>
 
     <ul>`;
     
