@@ -20,7 +20,7 @@ body {
 }
     
     h1 {
-        text-align: center;
+       
         color: white;
         size: 25px;
         padding:25px;
@@ -29,6 +29,7 @@ body {
 h2{
         background-color: rgb(255, 102, 0);
         color:white;
+         text-align: center;
 }
         
     
