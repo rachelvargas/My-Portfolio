@@ -19,17 +19,18 @@ body {
         padding:15px;
 }
     
-    h1 {
-       
+    h1 {            
+            
+        text-align: center;
         color: white;
-        size: 25px;
+        size: 30px;
         padding:25px;
         background-color: rgba(24, 168, 24, 0.479);
     }
 h2{
         background-color: rgb(255, 102, 0);
         color:white;
-         text-align: center;
+        text-align: center;
 }
         
     
